@@ -36,44 +36,40 @@ body{
     display: flex;
     gap: 50px;
 }
-.nav__item{
+.nav__list-item{
     display: inline-block;
     justify-content: space-between;
 }
-.text__nav{
+.nav__link-text{
     font-weight: 400;
     font-size: 16px;
     color: #3d3d3d;
 }
-.text_nav_border{
+.nav__link-border{
     padding-bottom: 25px;
     border-bottom: 3px solid #46A358;
 
 }
-.nav__item2{
+.nav_item{
     display: flex;
-}
-.nav-link{
-    margin-right: 30px;
-    display: flex;
+    justify-content: center;
     align-items: center;
-}
-.nav-link:last-child{
-    margin-right: 0;
+    gap: 30px;
 }
 .login_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #46A358;
     border-radius: 6px;
     background-color: #46A358;
     padding: 8px 17px;
     gap: 4px;
-}
-.text_nav_item{
     font-weight: 500;
     font-size: 16px;
     color: #fff;
 }
-.section1{
+.plant-welcome{
     display: flex;
     justify-content: center;
     margin-top: 13px;

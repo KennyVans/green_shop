@@ -7,6 +7,7 @@
   <title>Registration</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+
 <!-- шрифт Cera Pro — это коммерческий шрифт, недоступный в Google Fonts, я использовала другой, похожий -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,48 +18,49 @@
   <header>
     <div class="container">
       <div class="header__inner">
-      <img src="images/logo.svg" alt="logo">
+        <a href="">
+          <img src="images/logo.svg" alt="logo">
+        </a>
 
-      <div class="nav">
-        <ul class="nav__item">
+      <nav class="nav">
+        <ul class="nav__list-item">
           <li class="">
-            <a class="text__nav text_nav_border" href="#">Home</a>
+            <a class="nav__link-text nav__link-border" href="#">Home</a>
           </li>
         </ul>
-        <ul class="nav__item">
+        <ul class="nav__list-item">
           <li class="">
-            <a class="text__nav" href="#">Shop</a>
+            <a class="nav__link-text" href="#">Shop</a>
           </li>
         </ul>
-        <ul class="nav__item">
+        <ul class="nav__list-item">
           <li class="">
-            <a class="text__nav" href="#">Plant Care</a>
+            <a class="nav__link-text" href="#">Plant Care</a>
           </li>
         </ul>
-        <ul class="nav__item">
+        <ul class="nav__list-item">
           <li class="">
-            <a class="text__nav" href="#">Blogs</a>
+            <a class="nav__link-text" href="#">Blogs</a>
           </li>
         </ul>
-      </div>
-    <ul class="nav__item2">
-      <li class="nav-link">
+      </nav>
+
+
+      <div class="nav_item">
         <a href="#">
-        <img src="images/search.svg" alt="search">
+          <img src="images/search.svg" alt="search">
       </a>
-    </li>
-    <li class="nav-link">
-      <a href="#">
-        <img src="images/shop_cart.svg" alt="cart">
+  
+        <a href="#">
+          <img src="images/shop_cart.svg" alt="cart">
       </a>
-    </li>
-    <li class="nav-link login_btn">
-      <img src="images/logout.svg" alt="logout-login">
-      <a class="text_nav_item" href="index2.html">
+
+        <a class="login_btn" href="index2.html">
+        <img src="images/logout.svg" alt="">
         Login
       </a>
-      </li>
-      </ul>
+    </div>
+
     </div>
     </div>
   </header>
@@ -68,7 +70,7 @@
 
 <section>
   <div class="container">
-    <div class="section1">
+    <div class="plant-welcome">
     <div class="welcome_part">
     <p class="text">
       Welcome to GreenShop
@@ -85,7 +87,7 @@ Better <span style="color: #46a358;">Planet</span>
    </a>
   </div>
   <div class="plant__img">
-    <img src="images/flo_1.png">
+    <img src="images/flo_1.svg">
   </div>
   </div>
 </div>
