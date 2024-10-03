@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+<!-- шрифт Cera Pro — это коммерческий шрифт, недоступный в Google Fonts, я использовала другой, похожий -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div style="max-width: 500px; height: 656px; border: 1px solid #000000; margin: auto;">
+    <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 20px; color: #3d3d3d; margin-top: 52px; margin-bottom: 40px; text-align: center;">Login <span style="color: #3d3d3d; padding-left: 10px; padding-right: 12px;">|</span><span style="color: #46A358;">Register</span></p>
+    <p style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 13px; color: #3d3d3d; text-align: center; padding-bottom: 14px; ">Enter your email and password to register.</p>
+  
+  <form action="" method="post" name="register" style="display: flex; flex-direction: column; align-items: center;">
+    <input type="text" name="username" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px;  width: 300px; height: 40px; margin-bottom: 16px; padding-left: 12px; box-sizing: border-box; border: 1px solid #EAEAEA; border-radius: 5px;" placeholder="Username">
+    <input type="email" name="email" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px; width: 300px; height: 40px; margin-bottom: 16px; padding-left: 12px; box-sizing: border-box; border: 1px solid #EAEAEA; border-radius: 5px;" placeholder="Enter your email address">
+    <input type="password" name="password" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px; width: 300px; height: 40px; margin-bottom: 16px; padding-left: 12px; box-sizing: border-box; border: 1px solid #EAEAEA; border-radius: 5px;" placeholder="Password">
+    <input type="password" name="confirm_password" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px; width: 300px; height: 40px;  margin-bottom: 41px; padding-left: 12px; box-sizing: border-box; border: 1px solid #EAEAEA; border-radius: 5px;" placeholder="Confirm Password">
+  </form>
+
+  <div style="display: flex; justify-content: center;">
+    <button type="submit" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 16px; border-radius: 5px; border: none; background-color: #46A358; width: 300px; height: 45px; margin-bottom: 36px; cursor: pointer;"><span style="color: #FFFFFF;">Register</span>
+   </button>
+  </div>
+
+<p style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 13px;color: #3d3d3d; text-align: center; padding-bottom: 27px; ">Or register with</p>
+
+<div style="display: flex; justify-content: center; margin-bottom: 15px;">
+  <div style="list-style-type: none; border: 1px solid #EAEAEA; border-radius: 5px; width: 300px; height: 40px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/google_img.svg" style="margin-right: 8px;">
+      <a style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #727272; text-decoration: none;"  href="#">Continue with Google</a>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center; margin-bottom: 40px;">
+  <div style="list-style-type: none; border: 1px solid #EAEAEA; border-radius: 5px; width: 300px; height: 40px;  display: flex; align-items: center;  justify-content: center;">
+    <img src="images/fb_img.svg" style="margin-right: 8px; ">
+      <a style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #727272; text-decoration: none;"  href="#">Continue with Facebook</a>
+  </div>
+</div>
+
+<article style="background-color: #46A358; width: 100%; height: 10px;"></article>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
