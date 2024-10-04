@@ -45,6 +45,12 @@ body{
     font-size: 16px;
     color: #3d3d3d;
 }
+.nav__link-text:active{
+    color: #00000094;
+}
+.nav__link-text:hover{
+    color: #46a358;
+}
 .nav__link-border{
     padding-bottom: 25px;
     border-bottom: 3px solid #46A358;
@@ -68,6 +74,14 @@ body{
     font-weight: 500;
     font-size: 16px;
     color: #fff;
+}
+.login_btn:active{
+    color: #00000094;
+}
+.login_btn:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
 }
 .plant-welcome{
     display: flex;
@@ -111,6 +125,17 @@ body{
     border-radius: 6px;
     padding: 10px 26px;
 }
+.shop_btn:active{
+    color: #00000094;
+}
+.shop_btn:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
+}
+.list_short{
+    display: flex;
+}
 .list_and_img{
     margin-top: 25px;
     background-image: url(../images/bg_2.png);
@@ -131,6 +156,12 @@ body{
     font-weight: 400;
     color: #3d3d3d;
     margin-left: 12px;
+}
+.categories_list:active{
+    color: #00000094;
+}
+.categories_list:hover{
+    color: #46a358;
 }
 .price{
     font-weight: 700;
@@ -161,6 +192,12 @@ body{
     color: #3d3d3d;
     margin-left: 12px;
 }
+.size_list:active{
+    color: #00000094;
+}
+.size_list:hover{
+    color: #46a358;
+}
 .filter_btn{
     background: #46a358;
     border-radius: 6px;
@@ -173,6 +210,55 @@ body{
     border: none;
     margin-left: 30px;
 }
+.filter_btn:active{
+    color: #00000094;
+}
+.filter_btn:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
+}
+.sorting{
+    display: flex;
+    flex-direction: row;
+    margin: 25px  0 31px 50px;
+}
+.sorting_item{
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+}
+.short{
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+}
+.arrow_btn{
+    border: none;
+    background-color: #FFFFFF;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ниже это стили для хтмл регистрация */
 
 .registration{
     max-width: 500px;
@@ -239,6 +325,15 @@ body{
     height: 45px;
     margin-bottom: 36px;
     cursor: pointer;
+    color: #ffffff;
+}
+.submit-button:active{
+    color: #00000094;
+}
+.submit-button:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
 }
 .span_text{
     color: #FFFFFF;
