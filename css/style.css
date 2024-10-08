@@ -4,6 +4,8 @@ html{
 *,
 *::after,
 *::before{
+    padding: 0;
+    margin: 0;
     box-sizing: inherit;
 }
 ul{
@@ -18,27 +20,45 @@ body{
     font-style: normal;
     background: #ffffff;
     margin: 0;
-    color: #000000;
+}
+header{
+    padding-top: 30px;
+    margin-bottom: 12px;
 }
 .container{
   width: 1200px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 .header__inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid hwb(132 27% 36% / 0.5);
-    padding-bottom: 18px;
-    margin-top: 25px;
 }
-.nav{
+.logo_btn{
+    margin-bottom: 18px;
+}
+.nav__list-item{
     display: flex;
     gap: 50px;
 }
-.nav__list-item{
-    display: inline-block;
-    justify-content: space-between;
+
+
+
+/* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
+.nav__link-item::after{
+    display: block;
+    width: 0;
+    content: "";
+    background-color: #46A358;
+    height: 3px;
+    margin-top: 25px;
+    transition: 0.3s;
+    /* транзишн дает нам плавный переход д */
+}
+/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
+.nav__link-item:hover::after{
+    width: 100%;
 }
 .nav__link-text{
     font-weight: 400;
@@ -51,29 +71,31 @@ body{
 .nav__link-text:hover{
     color: #46a358;
 }
-.nav__link-border{
-    padding-bottom: 25px;
-    border-bottom: 3px solid #46A358;
-
-}
-.nav_item{
+.nav-item{
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-bottom: 18px;
 }
 .login_btn{
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 7px 17px;
     border: 1px solid #46A358;
     border-radius: 6px;
     background-color: #46A358;
-    padding: 8px 17px;
-    gap: 4px;
     font-weight: 500;
     font-size: 16px;
     color: #fff;
+}
+.login_btn::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    /* используем марджин-райт вместо гап */
+    background-image: url(../images/logout.svg);
 }
 .login_btn:active{
     color: #00000094;
@@ -83,19 +105,21 @@ body{
     background-color: #2b633b3c;
     color: #46a358;
 }
-.plant-welcome{
+
+/* ниже стили для 1й секции */
+.pic-plant{
     display: flex;
-    justify-content: center;
-    margin-top: 13px;
+    justify-content: space-between;
     background-image: url(../images/bg_1.png);
 }
-.text{
+.text-welcome{
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    /* letter-spacing это интервал  между буквами, text-transform: uppercase; — все буквы текста в заглавные */
     color: #3d3d3d;
-    margin: 80px 0 0 43px;
+    margin: 68px 0 7px 43px;
 }
 .caption{
     font-weight: 900;
@@ -103,15 +127,18 @@ body{
     line-height: 100%;
     text-transform: uppercase;
     color: #3d3d3d;
-    margin: 7px 0 0 40px;
+    margin: 7px 0 5px 40px;
     max-width: 530px;
+}
+.plant_color{
+    color: #46a358;
 }
 .title{
     font-weight: 400;
     font-size: 14px;
     line-height: 171%;
     color: #727272;
-    margin: 5px 0 44px 40px;
+    margin: 0 0 44px 40px;
     max-width: 557px;
 }
 .shop_btn{
@@ -133,8 +160,16 @@ body{
     background-color: #2b633b3c;
     color: #46a358;
 }
+
+
+
+
+
+ /* ниже не смотреть, там все надо переписать :) */
+/* ниже стили для 2й секции */
 .list_short{
     display: flex;
+    justify-content: space-between;
 }
 .list_and_img{
     margin-top: 25px;
@@ -218,32 +253,67 @@ body{
     background-color: #2b633b3c;
     color: #46a358;
 }
-.sorting{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .sorting{
     display: flex;
-    flex-direction: row;
-    margin: 25px  0 31px 50px;
+    margin: 25px 0 31px 0;
+    gap: 20px; 
 }
 .sorting_item{
-    display: flex;
-    flex-direction: row;
     font-weight: 400;
     font-size: 15px;
     color: #3d3d3d;
+    padding: 10px;
 }
 .short{
+    display: flex;
+    justify-content: center;
     font-weight: 400;
     font-size: 15px;
     color: #3d3d3d;
 }
 .arrow_btn{
+    display: flex;
+    justify-content: center;
     border: none;
     background-color: #FFFFFF;
-
+    margin-left: 5px;
+} */
+ .assortment_flower{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 31px 0 0 50px;
+    gap: 30px;
+ }
+.assortment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
 }
-
-
-
-
+.assortment_flower_price_old{
+    color: #A5A5A5; 
+    text-decoration: line-through;
+}
 
 
 
