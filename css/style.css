@@ -107,10 +107,13 @@ header{
 }
 
 /* ниже стили для 1й секции */
+.intro{
+    margin-bottom: 25px;
+}
 .pic-plant{
     display: flex;
     justify-content: space-between;
-    background-image: url(../images/bg_1.png);
+    background-color: #FAFAFA;
 }
 .text-welcome{
     font-weight: 500;
@@ -169,22 +172,130 @@ header{
     justify-content: space-between;
 }
 .left_site{
-    max-width: 310px;
+    max-width: 310px; 
+    max-height: 740px;
+    background-color: #FAFAFA;
+    padding-top: 14px;
 }
 .right_site{
     max-width: 840px;
 }
-.line_nn{
-    display: flex; 
-    gap: 40px;
-}
 .sorting_panel{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px;
+}
+.panel{
+    display: flex; 
+    gap: 40px;
 }
 .sorting_menu{
     display: flex;
     gap: 30px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.specifications{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    margin-left: 18px;
+    margin-bottom: 7px;
+}
+.categories-list{
+    margin-bottom: 36px;
+}
+.specifications_link{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 267%;
+    color: #3d3d3d;
+    margin-left: 30px;
+}
+.specifications_link:hover{
+    color: #46a358;
+}
+.specifications_link:active{
+    color: #727272;
+}
+.specifications-size{
+    margin-bottom: 19px;
+}
+.price{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    margin: 15px 0 16px 30px;
+}
+.filter_btn{
+    border-radius: 6px;
+    border: none;
+    width: 90px;
+    height: 35px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    background-color: #46a358;
+    margin-left: 30px;
+    margin-bottom: 46px;
+}
+.filter_btn:active{
+    color: #00000094;
+}
+.filter_btn:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
+    cursor: pointer;
+}
+.link_flower{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+}
+/* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
+.link_flower::after{
+    display: block;
+    width: 0;
+    content: "";
+    background-color: #46A358;
+    height: 3px;
+    margin-top: 7px;
+    transition: 0.3s;
+    /* транзишн дает нам плавный переход д */
+}
+/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
+.link_flower:hover::after{
+    width: 100%;
+}
+.link_flower:hover{
+    color: #46a358;
+}
+.link_flower:active{
+    color: #727272;
+}
+.arrow-btn{
+    border: none;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    display: flex;
+    cursor: pointer;
 }
 .flower_panel{
     display: flex;
@@ -194,9 +305,36 @@ header{
 .product_cart{
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
 }
-
-
+.images_flower-cart{
+    margin-bottom: 12px;
+}
+.name-flower_cart{
+    margin-bottom: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3d3d3d;
+}
+.name-flower_cart:hover{
+    color: #46a358;
+}
+.flower-price{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 89%;
+    color: #46a358;
+}
+.old-price{
+    color: #A5A5A5;
+    text-decoration: line-through;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 89%;
+    margin-left: 16px;
+}
 
 
 
