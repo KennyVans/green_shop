@@ -16,7 +16,7 @@ a{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    font-weight: 400, 500, 600, 800; 
+    font-weight: 100, 400, 500, 700; 
     font-style: normal;
     background: #ffffff;
     margin: 0;
@@ -125,7 +125,7 @@ header{
     margin: 68px 0 7px 43px;
 }
 .caption{
-    font-weight: 900;
+    font-weight: 700;
     font-size: 70px;
     line-height: 100%;
     text-transform: uppercase;
@@ -402,7 +402,7 @@ header{
 }
 .submit-button{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     border-radius: 5px;
     border: none;
