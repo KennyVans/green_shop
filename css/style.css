@@ -1,3 +1,96 @@
+@font-face {
+    font-family: 'cera_prothin';
+    src: url('../fonts/cerapro-thin-webfont.eot');
+    src: url('../fonts/cerapro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-thin-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-thin-webfont.woff') format('woff'),
+         url('../fonts/cerapro-thin-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-thin-webfont.svg#cera_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cera_problack';
+    src: url('../fonts/cerapro-black-webfont.eot');
+    src: url('../fonts/cerapro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-black-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-black-webfont.woff') format('woff'),
+         url('../fonts/cerapro-black-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-black-webfont.svg#cera_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cera_probold';
+    src: url('../fonts/cerapro-bold-webfont.eot');
+    src: url('../fonts/cerapro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-bold-webfont.woff') format('woff'),
+         url('../fonts/cerapro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-bold-webfont.svg#cera_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cera_prolight';
+    src: url('../fonts/cerapro-light-webfont.eot');
+    src: url('../fonts/cerapro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-light-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-light-webfont.woff') format('woff'),
+         url('../fonts/cerapro-light-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-light-webfont.svg#cera_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cera_promedium';
+    src: url('../fonts/cerapro-medium_1-webfont.eot');
+    src: url('../fonts/cerapro-medium_1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-medium_1-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-medium_1-webfont.woff') format('woff'),
+         url('../fonts/cerapro-medium_1-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-medium_1-webfont.svg#cera_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cera_promedium';
+    src: url('../fonts/cerapro-medium-webfont.eot');
+    src: url('../fonts/cerapro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-medium-webfont.woff') format('woff'),
+         url('../fonts/cerapro-medium-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-medium-webfont.svg#cera_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cera_proregular';
+    src: url('../fonts/cerapro-regular-webfont.eot');
+    src: url('../fonts/cerapro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-regular-webfont.woff') format('woff'),
+         url('../fonts/cerapro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-regular-webfont.svg#cera_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 html{
     box-sizing: border-box;
 }
@@ -15,8 +108,8 @@ a{
     text-decoration: none;
 }
 body{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100, 400, 500, 700; 
+    font-family: 'cera_proregular';
+    font-weight: 100, 300, 400, 500, 700, 900; 
     font-style: normal;
     background: #ffffff;
     margin: 0;
@@ -167,6 +260,9 @@ header{
 
 
 /*стили для второй секции product*/
+.product{
+    margin-bottom: 20px;
+}
 .product .container{
     display: flex;
     justify-content: space-between;
@@ -202,7 +298,7 @@ header{
 }
 
 .specifications{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 700;
     font-size: 18px;
     line-height: 89%;
@@ -214,7 +310,7 @@ header{
     margin-bottom: 36px;
 }
 .specifications_link{
-    font-family: 'Poppins', sans-serif;
+    
     font-weight: 400;
     font-size: 15px;
     line-height: 267%;
@@ -231,7 +327,7 @@ header{
     margin-bottom: 19px;
 }
 .price{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 15px;
     line-height: 107%;
@@ -329,16 +425,38 @@ header{
 .old-price{
     color: #A5A5A5;
     text-decoration: line-through;
-    font-family: var(--font-family);
+    font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 18px;
     line-height: 89%;
     margin-left: 16px;
 }
-
-
-
-
+.switch{
+    margin-bottom: 94px;
+}
+.switch_link{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.switch-nomber{
+    display: flex;
+    border: 1px solid #e5e5e5 transparent;
+    /*добавила слово transparent что бы не скакали клеточки*/
+    border-radius: 4px;
+    padding: 10px 13px;
+    color: #3d3d3d;
+    font-family: 'cera_proregular';
+    font-weight: 300;
+    font-size: 18px;
+}
+.switch-nomber:hover{
+    background-color: #46A358;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+}
 
 
 
@@ -354,7 +472,7 @@ header{
     margin-top: 35px;
 }
 .login{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 500;
     font-size: 20px;
     color: #191616;
@@ -371,7 +489,7 @@ header{
     color: #46A358;
 }
 .text_register{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 13px;
     color: #3d3d3d;
@@ -385,7 +503,7 @@ header{
     margin-bottom: 25px;
 }
 .input{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 14px;
     width: 300px;
@@ -401,7 +519,7 @@ header{
     justify-content: center;
 }
 .submit-button{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 500;
     font-size: 16px;
     border-radius: 5px;
@@ -425,7 +543,7 @@ header{
     color: #FFFFFF;
 }
 .register_google_fb{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 13px;
     color: #3d3d3d;
@@ -444,7 +562,7 @@ header{
     width: 300px;
     height: 40px;
     gap: 9px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 500;
     font-size: 13px;
     color: #727272;
@@ -464,7 +582,7 @@ header{
     list-style-type: none;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'cera_proregular';
     font-weight: 500;
     font-size: 13px;
     color: #727272;

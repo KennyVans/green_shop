@@ -5,7 +5,10 @@
 
 // function myClick() { console.log (''); }  далее пишу функцию она чем-то по стилю похожа на цсс - внутри фигурной скобки пишу что она делает
 
-document.querySelector('#subButton').onclick = myBtnClick;
+// document.querySelector('#subButton').onclick = myBtnClick;
+// document.querySelector('#subButton').addEventListener('click', myBtnClick); и тот и тот пример правильный, используй любой
+
+document.querySelector('#subButton').addEventListener('click', myBtnClick);
 
 function myBtnClick() {
     // console.log ('work'); это пример
