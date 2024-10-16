@@ -499,9 +499,10 @@ header{
     display: flex;
     align-items: center;
     background: #FBFBFB; 
+    max-width: 586px;
 }
 .flower-content{
-    padding-right: 20px;
+    padding-right: 16px;
 }
 .title-flower{
     font-family: 'cera_proregular';
@@ -523,7 +524,7 @@ header{
     color: #727272;
     margin-bottom: 25px;
     text-align: right;
-    width: 292px;
+    width: 278px;
 }
 .find-btn{
     display: flex;
@@ -551,9 +552,91 @@ header{
 
 
 
+/* ниже это стили для Our Blog */
+.blog{
+    margin-bottom: 100px;
+}
+.blog-content{
+    text-align: center;
+}
+.blog-title{
+    font-family: 'cera_proregular';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 53%;
+    text-align: center;
+    color: #3d3d3d;
+    margin-bottom: 15px;
+}
+.blog-text{
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 35px;
+}
+.our-blog-cart{
+    display: flex;
+     justify-content: space-between;
+}
+.blog-cart{
+    background-color: #FBFBFB;
+    width: 268px;
+}
+.blog-img{
+    margin-bottom: 9px;
+}
+.ourblog-text{
+    margin-left: 15px;
+    margin-bottom: 13px;
+}
+.blog-text-cart{
+    font-family: 'cera_proregular';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #46a358; 
+}
+.title-cart{
+    font-family: 'cera_proregular';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #3d3d3d;
+    width: 202px;
+    margin-bottom: 4px;
+}
+.our-blog-text{
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #727272;
+    width: 242px;
+    margin-bottom: 9px;
+}
+.blog-link{
+    font-family: 'cera_proregular';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #3d3d3d;
+    display: flex;
+    gap: 3px;
+}
+
+
+
+
+
+
+
+
+
 
 /* ниже это стили для хтмл регистрация */
-
 .registration{
     max-width: 500px;
     height: 656px;
