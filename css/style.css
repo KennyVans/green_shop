@@ -625,8 +625,15 @@ header{
     color: #3d3d3d;
     display: flex;
     gap: 3px;
+    background-image: url(../images/blog-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 32%;
+    /* сдвинула стрелку от текста на 35 проц */
 }
-
+.blog-link:hover{
+    color: #46A358;
+    background-image: url(../images/blog-arrow-green.svg);
+}
 
 
 
