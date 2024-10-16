@@ -8,13 +8,13 @@
 // document.querySelector('#subButton').onclick = myBtnClick;
 // document.querySelector('#subButton').addEventListener('click', myBtnClick); и тот и тот пример правильный, используй любой
 
-document.querySelector('#subButton').addEventListener('click', myBtnClick);
+// document.querySelector('#subButton').addEventListener('click', myBtnClick);
 
-function myBtnClick() {
-    // console.log ('work'); это пример
-    // get input далее получаем данные с инпута
-    // в интупах свойство велью value отвечает за текст введенный пользователем в строке
-    let a = document.querySelector('.input').value;
-    // в консоль выводим переменную а
-    console.log(a);
-}
+// function myBtnClick() {
+//     // console.log ('work'); это пример
+//     // get input далее получаем данные с инпута
+//     // в интупах свойство велью value отвечает за текст введенный пользователем в строке
+//     let a = document.querySelector('.input').value;
+//     // в консоль выводим переменную а
+//     console.log(a);
+// }
