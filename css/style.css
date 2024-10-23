@@ -110,15 +110,15 @@ a{
 body{
     font-family: 'cera_proregular';
     font-style: normal;
-    background: #ffffff;
     margin: 0;
+    /* cursor: url("cursor.svg"), auto; */
 }
 header{
     padding-top: 30px;
     margin-bottom: 12px;
 }
 .container{
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .header__inner{
@@ -129,13 +129,19 @@ header{
 }
 .logo_btn{
     margin-bottom: 18px;
+    display: flex;
+}
+.logo_btn::after{
+    content: "";
+    width: 150px;
+    height: 34px;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
 }
 .nav__list-item{
     display: flex;
     gap: 50px;
 }
-
-
 
 /* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
 .nav__link-item::after{
@@ -161,13 +167,32 @@ header{
     color: #00000094;
 }
 .nav__link-text:hover{
-    color: #46a358;
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #3d3d3d;
 }
 .nav-item{
     display: flex;
     align-items: center;
     gap: 30px;
     margin-bottom: 18px;
+}
+.search-item::after{
+    display: flex;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+}
+.cart-item::after{
+    display: flex;
+    content: "";
+    width: 29px;
+    height: 24px;
+    background-image: url(../images/shop_cart.svg);
+    background-repeat: no-repeat;
 }
 .login_btn{
     display: flex;
@@ -182,7 +207,6 @@ header{
 }
 .login_btn::before{
     content: "";
-    display: inline-block;
     width: 20px;
     height: 20px;
     margin-right: 4px;
@@ -198,6 +222,44 @@ header{
     color: #46a358;
 }
 
+
+
+/* ниже пишу для выпадющего меню */
+.dropdown{
+    position: relative;
+}
+.dropdown:hover .menu-list{
+    display: block;
+}
+.menu-list{
+    position: absolute;
+    min-width: 188px;
+    top: 40px;
+    display: none;
+    padding-top: 20px;
+}
+.menu-item:last-child{
+    padding-bottom: 0;
+}
+.menu-item{
+    padding-bottom: 10px;
+    background-color: #EDF6EE;
+}
+.menu-link{
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+}
+
+
+
+
+
+
+
+
+
 /* ниже стили для 1й секции */
 .intro{
     margin-bottom: 25px;
@@ -212,7 +274,8 @@ header{
     font-size: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    /* letter-spacing это интервал  между буквами, text-transform: uppercase; — все буквы текста в заглавные */
+    /* letter-spacing это интервал  между буквами, 
+    text-transform: uppercase; — все буквы текста в заглавные */
     color: #3d3d3d;
     margin: 68px 0 7px 43px;
 }
@@ -260,7 +323,7 @@ header{
 
 /*стили для второй секции product*/
 .product{
-    margin-bottom: 20px;
+    margin-bottom: 90px;
 }
 .product .container{
     display: flex;
@@ -294,6 +357,52 @@ header{
     color: #3d3d3d;
     align-items: center;
     margin-bottom: 7px;
+}
+.link_flower{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+}
+/* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
+.link_flower::after{
+    display: block;
+    width: 0;
+    content: "";
+    background-color: #46A358;
+    height: 3px;
+    margin-top: 7px;
+    transition: 0.3s;
+    /* транзишн дает нам плавный переход д */
+}
+/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
+.link_flower:hover::after{
+    width: 100%;
+}
+.link_flower:hover{
+    color: #46a358;
+}
+.link_flower:active{
+    color: #727272;
+}
+.arrow-btn{
+    display: flex;
+    border: none;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+.arrow-btn::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    /* используем марджин-райт вместо гап */
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
 }
 
 .specifications{
@@ -355,55 +464,120 @@ header{
     color: #46a358;
     cursor: pointer;
 }
-.link_flower{
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 107%;
-    color: #3d3d3d;
-}
-/* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
-.link_flower::after{
-    display: block;
-    width: 0;
-    content: "";
-    background-color: #46A358;
-    height: 3px;
-    margin-top: 7px;
-    transition: 0.3s;
-    /* транзишн дает нам плавный переход д */
-}
-/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
-.link_flower:hover::after{
-    width: 100%;
-}
-.link_flower:hover{
-    color: #46a358;
-}
-.link_flower:active{
-    color: #727272;
-}
-.arrow-btn{
-    border: none;
-    background-color: #FFFFFF;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 107%;
-    color: #3d3d3d;
-    display: flex;
-    cursor: pointer;
-}
+
 .flower_panel{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/*  пишем бордер топ и к нему трансперент(не в ховере) чтобы при наведении не "скакало" изображение */
+/*наша скидка 13% примыкает к тому , у кого есть  position: relative; , потому что наша скидка имеет позишн абсолют, если ни у кого не будет  position: relative; , то скидка примкнет к началу контейнера */
+
 .product_cart{
     display: flex;
     flex-direction: column;
     margin-bottom: 70px;
+    position: relative;
+    border-top: 1px solid transparent;
 }
+.product_cart:hover{
+    border-top: 1px solid #46a359;
+}
+
+
+
+
+
+.user-icon{
+     display: none;
+     
+ }
+ .product_cart:hover .user-icon{
+    display: block;
+ }
+/* ниже создала свг черные и зеленые при наведении */
+.icon-cart::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/shop_cart.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 4px;
+    padding: 8px 7px;
+    bottom: 57px;
+    left: 67px;
+}
+.icon-cart:hover::before{
+    background-image: url(../images/shop-green.svg);
+}
+.icon-like::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/heart-like.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 4px;
+    padding: 8px 7px;
+    bottom: 57px;
+    right: 111px;
+}
+.icon-like:hover::before{
+    background-image: url(../images/heart-green.svg);
+}
+.icon-srarch::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/search-icon.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 4px;
+    padding: 8px 7px;
+    bottom: 57px;
+    right: 66px;
+}
+.icon-srarch:hover::before{
+    background-image: url(../images/search-green.svg);
+}
+
+
+
+.product_cart:nth-child(7){
+    margin-bottom: 0;
+}
+.product_cart:nth-child(8){
+    margin-bottom: 0;
+}
+.product_cart:nth-child(9){
+    margin-bottom: 0;
+}
+/* убрала марджин боттом у трех последних карточек */
+
 .images_flower-cart{
     margin-bottom: 12px;
+}
+
+.sale-icon{
+    background-color: #46A358;
+    padding: 6px 8px;
+    width: 80px;
+    font-family: 'cera_proregular';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 14px;
+    left: 2px;
 }
 .name-flower_cart{
     margin-bottom: 6px;
@@ -450,7 +624,6 @@ header{
     display: flex;
     gap: 10px;
 }
-
 .switch-nomber{
     display: flex; 
     justify-content: center;  
@@ -472,18 +645,19 @@ header{
 .arrow-switch{
     border: 1px solid #e5e5e5;
     border-radius: 4px;
+}
+.arrow-switch::after{
+    content: "";
+    width: 8px;
+    height: 13px;
     background-image: url(../images/switch_arrow_b.svg);
     background-repeat: no-repeat;
-    background-position: center;
-    /* задала стрелочке центр */
 }
-.arrow-switch:hover{
+.arrow-switch:hover::after{
+    background-color: #46A358;
     background-image: url(../images/switch_arrow_w.svg);
     background-repeat: no-repeat;
-    background-color: #46A358;
-    border: 1px solid #46A358;
 }
-
 
 
 
@@ -493,16 +667,16 @@ header{
 }
 .floral{
     display: flex;
-    gap: 28px;
+    justify-content: space-between;
 }
 .succulents_content{
     display: flex;
     align-items: center;
-    background: #FBFBFB; 
+    background-color: #FBFBFB; 
     max-width: 586px;
 }
 .flower-content{
-    padding-right: 16px;
+    padding-right:  30px;
 }
 .title-flower{
     font-family: 'cera_proregular';
@@ -512,9 +686,8 @@ header{
     text-transform: uppercase;
     color: #3d3d3d;
     margin-bottom: 9px;
-    display: flex;
-    justify-content: end;
     text-align: right;
+     
 }
 .text-flower{
     font-family: 'cera_proregular';
@@ -524,9 +697,8 @@ header{
     color: #727272;
     margin-bottom: 25px;
     text-align: right;
-    width: 278px;
 }
-.find-btn{
+.find_btn_link{
     display: flex;
     justify-content: right;
 }
@@ -537,12 +709,22 @@ header{
     font-size: 14px;
     color: #fff;
     border-radius: 6px;
-    padding: 11px 27px;
+    line-height: 143%;
     border: 1px solid #46A358;
     background: #46a358;
-    gap: 2px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 140px;
+    height: 40px;
+}
+.find_link::after{
+    content: "";
+    width: 20px;
+    height: 15px;
+    background-image: url(../images/find_arrow.svg);
+    background-repeat: no-repeat;
+    margin-left: 5px;
 }
 .find_link:hover{
     border: 1px solid #46A358;
@@ -624,19 +806,23 @@ header{
     line-height: 114%;
     color: #3d3d3d;
     display: flex;
-    gap: 3px;
-    background-image: url(../images/blog-arrow.svg);
+    align-items: center;
+}
+.blog-link::after{
+    content: "";
+    width: 16px;
+    height: 13px;
+    margin-left: 3px;
+    background-image: url(../images/blog-arrow.svg); 
     background-repeat: no-repeat;
-    background-position: 32%;
-    /* сдвинула стрелку от текста на 35 проц */
+}
+.blog-link:hover:after{
+    background-image: url(../images/blog-arrow-green.svg);
+    background-repeat: no-repeat;
 }
 .blog-link:hover{
-    color: #46A358;
-    background-image: url(../images/blog-arrow-green.svg);
+    color: #46a358;
 }
-
-
-
 
 
 
