@@ -113,6 +113,9 @@ body{
     margin: 0;
     /* cursor: url("cursor.svg"), auto; */
 }
+
+
+/* ниже стили для хедера */
 header{
     padding-top: 30px;
     margin-bottom: 12px;
@@ -141,6 +144,7 @@ header{
 .nav__list-item{
     display: flex;
     gap: 50px;
+    position: relative;
 }
 
 /* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
@@ -163,11 +167,7 @@ header{
     font-size: 16px;
     color: #3d3d3d;
 }
-.nav__link-text:active{
-    color: #00000094;
-}
-.nav__link-text:hover{
-
+.nav__link-item:hover .nav__link-text{
     font-weight: 700;
     font-size: 16px;
     color: #3d3d3d;
@@ -224,11 +224,11 @@ header{
 
 
 
+
+
 /* ниже пишу для выпадющего меню */
-.dropdown{
-    position: relative;
-}
-.dropdown:hover .menu-list{
+/* нав линк айтем задала позишн, он выше там в стилях */
+.nav__link-item:hover .menu-list{
     display: block;
 }
 .menu-list{
@@ -238,24 +238,78 @@ header{
     display: none;
     padding-top: 20px;
 }
-.menu-item:last-child{
-    padding-bottom: 0;
-}
 .menu-item{
-    padding-bottom: 10px;
     background-color: #EDF6EE;
+    height: 35px;
+    display: flex;
+    align-items: center;
 }
+.menu-item:hover{
+    background-color: #1A712A;
+}
+
 .menu-link{
     font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 16px;
     color: #3d3d3d;
+    position: relative;
+    padding-left: 14px;
+}
+.menu-item:hover .menu-link{
+    font-weight: 700;
+    color: #fff;
+}
+.menu-link-item::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/arrow-menu.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 163px;
+    bottom: 0;
+}
+.menu-item:hover .menu-link-item:before{
+    background-image: url(../images/arrow-menu-w.svg);
+    background-repeat: no-repeat;
 }
 
 
-
-
-
+/* выпадашка в выпадашке */
+.popup{
+    position: absolute;
+    min-width: 183px;
+    left: 185px;
+    top: 20px;
+    padding-left: 5px;
+    display: none;
+}
+.menu-item:hover .popup{
+    display: block;
+}
+.popup-link{
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    padding-left: 14px;
+}
+.popup-list{
+    background-color: #EDF6EE;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+.popup-list:hover{
+    background-color: #1A712A;
+}
+.popup-list:hover .popup-link{
+    font-family: 'cera_proregular';
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+}
 
 
 
@@ -318,6 +372,9 @@ header{
     background-color: #2b633b3c;
     color: #46a358;
 }
+
+
+
 
 
 
@@ -484,19 +541,69 @@ header{
 .product_cart:hover{
     border-top: 1px solid #46a359;
 }
+/* убрала марджин боттом у трех последних карточек */
+.product_cart:nth-child(7){
+    margin-bottom: 0;
+}
+.product_cart:nth-child(8){
+    margin-bottom: 0;
+}
+.product_cart:nth-child(9){
+    margin-bottom: 0;
+}
+
+.images_flower-cart{
+    margin-bottom: 12px;
+}
+.sale-icon{
+    background-color: #46A358;
+    padding: 6px 8px;
+    width: 80px;
+    font-family: 'cera_proregular';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 14px;
+    left: 2px;
+}
+.name-flower_cart{
+    margin-bottom: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3d3d3d;
+}
+.name-flower_cart:hover{
+    color: #46a358;
+}
+.flower-price{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 89%;
+    color: #46a358;
+}
+.old-price{
+    color: #A5A5A5;
+    text-decoration: line-through;
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 89%;
+    margin-left: 16px;
+}
 
 
 
 
-
+/* ниже стили -  при наведении на карточки с цветами всплывающие элементы */
 .user-icon{
      display: none;
-     
  }
  .product_cart:hover .user-icon{
     display: block;
  }
-/* ниже создала свг черные и зеленые при наведении */
 .icon-cart::before{
     content: '';
     width: 35px;
@@ -551,59 +658,6 @@ header{
 
 
 
-.product_cart:nth-child(7){
-    margin-bottom: 0;
-}
-.product_cart:nth-child(8){
-    margin-bottom: 0;
-}
-.product_cart:nth-child(9){
-    margin-bottom: 0;
-}
-/* убрала марджин боттом у трех последних карточек */
-
-.images_flower-cart{
-    margin-bottom: 12px;
-}
-
-.sale-icon{
-    background-color: #46A358;
-    padding: 6px 8px;
-    width: 80px;
-    font-family: 'cera_proregular';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    color: #fff;
-    position: absolute;
-    top: 14px;
-    left: 2px;
-}
-.name-flower_cart{
-    margin-bottom: 6px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    color: #3d3d3d;
-}
-.name-flower_cart:hover{
-    color: #46a358;
-}
-.flower-price{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 89%;
-    color: #46a358;
-}
-.old-price{
-    color: #A5A5A5;
-    text-decoration: line-through;
-    font-family: 'cera_proregular';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 89%;
-    margin-left: 16px;
-}
 
 
 
@@ -611,8 +665,7 @@ header{
 
 
 
-
-
+/* секция - 1,2,3,4,5 переключатель между страничками */
 .switch{
     margin-bottom: 94px;
 }
@@ -661,6 +714,10 @@ header{
 
 
 
+
+
+
+
 /* ниже стили для секции два цветка */
 .more-plants{
     margin-bottom: 142px;
@@ -687,7 +744,6 @@ header{
     color: #3d3d3d;
     margin-bottom: 9px;
     text-align: right;
-     
 }
 .text-flower{
     font-family: 'cera_proregular';
