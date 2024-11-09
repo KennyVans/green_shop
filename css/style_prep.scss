@@ -27,15 +27,15 @@ body{
 .container{
     max-width: 1200px;
     margin: 0 auto;
-  }
+}
 @import "_fonts.scss";
 @import "_preload.scss"; 
 @import "_header.scss";
+@import "_media.scss";
 
 
 
-
-
+@media only screen and (max-width: 600px) {}
 
 
 
