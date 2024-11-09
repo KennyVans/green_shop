@@ -1,0 +1,1268 @@
+$green_color: #46A358;
+$dark_color: #3d3d3d;
+$standard_font: 'cera_proregular';
+// выше переменные - цвет, шрифт и тд
+
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: $standard_font;
+    font-style: normal;
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+@import "_fonts.scss";
+@import "_preload.scss"; 
+@import "_header.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ниже стили для 1й секции */
+.intro{
+    margin-bottom: 25px;
+}
+.pic-plant{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAFAFA;
+}
+.text-welcome{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    /* letter-spacing это интервал  между буквами, 
+    text-transform: uppercase; — все буквы текста в заглавные */
+    color: $dark_color;
+    margin: 68px 0 7px 43px;
+}
+.caption{
+    font-family: 'cera_problack';
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin: 7px 0 5px 40px;
+    max-width: 530px;
+}
+.plant_color{
+    color: $green_color;
+}
+.title{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #727272;
+    margin: 0 0 44px 40px;
+    max-width: 557px;
+}
+.shop_btn{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 41px;
+    background-color: $green_color;
+    border-radius: 6px;
+    padding: 10px 26px;
+    border: 1px solid transparent;
+    transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
+}
+.shop_btn:active{
+    color: #00000094;
+}
+.shop_btn:hover{
+    border: 1px solid $green_color;
+    background-color: #2b633b3c;
+    color: $green_color;
+}
+
+
+
+
+
+
+
+
+/*стили для второй секции product*/
+.product{
+    margin-bottom: 90px;
+}
+.product .container{
+    display: flex;
+    justify-content: space-between;
+}
+.left_site{
+    max-width: 310px; 
+    max-height: 740px;
+    background-color: #FAFAFA;
+    padding-top: 14px;
+}
+.right_site{
+    max-width: 840px;
+}
+.sorting_panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px;
+}
+.panel{
+    display: flex; 
+    gap: 40px;
+}
+
+
+
+
+/* планочка сортировки цветов */
+.sorting_menu{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 7px;
+}
+.sorting-title{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    align-items: center;
+}
+.sorting-nav{
+    position: relative;
+}
+.sorting-nav:hover .sort-menu{
+    display: block;
+}
+.arrow-btn{
+    display: flex;
+    font-family: $standard_font;
+    border: none;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+.arrow-btn:hover{
+    color: #46A358;
+}
+.arrow-btn::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    /* используем марджин-райт вместо гап */
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+}
+.arrow-btn:hover::after{
+    background-image: url(../images/arrow-sorting.svg);
+}
+.sort-menu{
+    padding-top: 20px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    right: 0px;
+}
+.sort-item{
+    width: 178px;
+    height: 35px;
+    background-color: #EDF6EE;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+}
+.sort-item:hover{
+    background: #1a712a;
+}
+.sort-item:hover .link-menu-sort-flower{
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'cera_probold';
+}
+.link-menu-sort-flower{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    display: block;
+    width: 100%;
+}
+
+.link_flower{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+}
+/* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
+.link_flower::after{
+    display: block;
+    width: 0;
+    content: "";
+    background-color: #46A358;
+    height: 3px;
+    margin-top: 7px;
+    transition: 0.3s;
+    /* транзишн дает нам плавный переход д */
+}
+/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
+.link_flower:hover::after{
+    width: 100%;
+}
+.link_flower:hover{
+    color: #46a358;
+}
+.link_flower:active{
+    color: #727272;
+}
+
+
+.specifications{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    margin-left: 18px;
+    margin-bottom: 7px;
+}
+.categories-list{
+    margin-bottom: 36px;
+}
+.specifications_link{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 267%;
+    color: #3d3d3d;
+    margin-left: 30px;
+}
+.specifications_link:hover{
+    color: #46a358;
+}
+.specifications_link:active{
+    color: #727272;
+}
+.specifications-size{
+    margin-bottom: 19px;
+}
+.price{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    margin: 15px 0 16px 30px;
+}
+.filter_btn{
+    border-radius: 6px;
+    border: none;
+    width: 90px;
+    height: 35px;
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    background-color: #46a358;
+    margin-left: 30px;
+    margin-bottom: 46px;
+}
+.filter_btn:active{
+    color: #00000094;
+}
+.filter_btn:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
+    cursor: pointer;
+}
+
+.flower_panel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*  пишем бордер топ и к нему трансперент(не в ховере) чтобы при наведении не "скакало" изображение */
+/*наша скидка 13% примыкает к тому , у кого есть  position: relative; , потому что наша скидка имеет позишн абсолют, если ни у кого не будет  position: relative; , то скидка примкнет к началу контейнера */
+
+.product_cart{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid transparent;
+}
+.product_cart:hover{
+    border-top: 1px solid #46a359;
+}
+/* убрала марджин боттом у трех последних карточек */
+.product_cart:nth-child(7){
+    margin-bottom: 0;
+}
+.product_cart:nth-child(8){
+    margin-bottom: 0;
+}
+.product_cart:nth-child(9){
+    margin-bottom: 0;
+}
+
+.images_flower-cart{
+    margin-bottom: 12px;
+}
+.sale-icon{
+    background-color: #46A358;
+    padding: 6px 8px;
+    width: 80px;
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 14px;
+    left: 2px;
+}
+.name-flower_cart{
+    font-family: $standard_font;
+    margin-bottom: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3d3d3d;
+}
+.name-flower_cart:hover{
+    color: #46a358;
+}
+.flower-price{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #46a358;
+}
+.old-price{
+    color: #A5A5A5;
+    text-decoration: line-through;
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 89%;
+    margin-left: 16px;
+}
+
+
+
+
+/* ниже стили -  при наведении на карточки с цветами всплывающие элементы */
+.user-icon{
+     display: none;
+ }
+ .product_cart:hover .user-icon{
+    display: block;
+ }
+.icon-cart::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/shop_cart.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 4px;
+    padding: 8px 7px;
+    bottom: 57px;
+    left: 67px;
+}
+.icon-cart:hover::before{
+    background-image: url(../images/shop-green.svg);
+}
+.icon-like::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/heart-like.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 4px;
+    padding: 8px 7px;
+    bottom: 57px;
+    right: 111px;
+}
+.icon-like:hover::before{
+    background-image: url(../images/heart-green.svg);
+}
+.icon-srarch::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/search-icon.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 4px;
+    padding: 8px 7px;
+    bottom: 57px;
+    right: 66px;
+}
+.icon-srarch:hover::before{
+    background-image: url(../images/search-green.svg);
+}
+
+
+
+
+
+
+
+
+
+
+/* секция - 1,2,3,4,5 переключатель между страничками */
+.switch{
+    margin-bottom: 94px;
+}
+.switch-content{
+    display: flex;
+    justify-content: end;
+}
+.switch_list{
+    display: flex;
+    gap: 10px;
+}
+.switch-nomber{
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    width: 35px;  
+    height: 35px; 
+    border: 1px solid #e5e5e5;
+    border-radius: 4px; 
+    color: #3d3d3d;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'cera_prolight';
+}
+.switch-nomber:hover{
+    background-color: #46A358;
+    border: 1px solid #46A358;
+    color: #ffffff;
+    font-weight: 700; 
+    font-family: 'cera_probold';
+}
+.arrow-switch{
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+.arrow-switch::after{
+    content: "";
+    width: 8px;
+    height: 13px;
+    background-image: url(../images/switch_arrow_b.svg);
+    background-repeat: no-repeat;
+}
+.arrow-switch:hover::after{
+    background-color: #46A358;
+    background-image: url(../images/switch_arrow_w.svg);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+/* ниже стили для секции два цветка */
+.more-plants{
+    margin-bottom: 142px;
+}
+.floral{
+    display: flex;
+    justify-content: space-between;
+}
+.succulents_content{
+    display: flex;
+    align-items: center;
+    background-color: #FBFBFB; 
+    max-width: 586px;
+    position: relative;
+}
+.find-more-icon{
+    position: absolute;
+    bottom: 10px;
+}
+.flower-content{
+    padding:  37px 30px 46px 0;
+    width: 600px;
+}
+.title-flower{
+    font-family: 'cera_problack';
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 9px;
+    text-align: right;
+}
+.text-flower{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #727272;
+    margin-bottom: 25px;
+    text-align: end;
+}
+.find_btn_link{
+    display: flex;
+    justify-content: right;
+}
+
+.find_link{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 6px;
+    line-height: 143%;
+    border: 1px solid #46A358;
+    background: #46a358;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+}
+.find_link::after{
+    content: "";
+    width: 20px;
+    height: 15px;
+    background-image: url(../images/find_arrow.svg);
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+.find_link:hover{
+    border: 1px solid #46A358;
+    background: #a1a1a15e;
+    color: #46a358;
+}
+
+
+
+/* ниже это стили для Our Blog */
+.blog{
+    margin-bottom: 100px;
+}
+.blog-content{
+    text-align: center;
+}
+.blog-title{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 53%;
+    text-align: center;
+    color: #3d3d3d;
+    margin-bottom: 15px;
+}
+.blog-text{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 35px;
+}
+.our-blog-cart{
+    display: flex;
+     justify-content: space-between;
+}
+.blog-cart{
+    background-color: #FBFBFB;
+    width: 268px;
+}
+.blog-img{
+    margin-bottom: 9px;
+}
+.ourblog-text{
+    margin-left: 15px;
+    margin-bottom: 13px;
+}
+.blog-text-cart{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #46a358; 
+}
+.title-cart{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #3d3d3d;
+    width: 202px;
+    margin-bottom: 4px;
+}
+.our-blog-text{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #727272;
+    width: 242px;
+    margin-bottom: 9px;
+}
+.blog-link{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #3d3d3d;
+    display: flex;
+    align-items: center;
+}
+.blog-link::after{
+    content: "";
+    width: 16px;
+    height: 13px;
+    margin-left: 3px;
+    background-image: url(../images/blog-arrow.svg); 
+    background-repeat: no-repeat;
+}
+.blog-link:hover:after{
+    background-image: url(../images/blog-arrow-green.svg);
+    background-repeat: no-repeat;
+}
+.blog-link:hover{
+    color: #46a358;
+}
+
+
+
+
+
+
+
+/* ниже секция с эмейл и три карточки */
+.about-us{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FBFBFB;
+    padding: 24px 25px;
+    align-items: center;
+}
+.card-item{
+    max-width: 734px;
+    display: flex;
+    gap: 30px;
+}
+.our-mission{
+    max-width: 204px;
+}
+.images_icon{
+    margin-bottom: 15px;
+}
+.our-mission_title{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 94%;
+    color: #3d3d3d;
+    margin-bottom: 9px;
+}
+.our-mission_subtitle{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #727272;
+    max-width: 204px;
+}
+.form-email{
+    margin-top: 13px;
+    max-width: 354px;
+}
+.form-title{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    text-align: right;
+    margin-bottom: 25px;
+}
+.input-button{
+    display: flex;
+    justify-content: end;
+}
+.email-for-add{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 114%;
+    color: #2f703c;
+    padding-left: 11px;
+    width: 268px;
+    height: 40px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    background-color: #fff;
+}
+.email-for-add::placeholder{
+    color: #acacac;
+}
+.button_join{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #fff;
+    width: 85px;
+    height: 40px;
+    border: none;
+    background-color: #46A358;
+    border-radius: 0 6px 6px 0;
+}
+.button_join:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
+    cursor: pointer;
+}
+.form-subtitle{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 169%;
+    color: #727272;
+    max-width: 354px;
+}
+.stick{
+    width: 1px;
+    max-height: 187px;
+    background: rgba(70, 163, 88, 0.1);
+}
+
+
+
+
+/* ниже футер, секция с логотипом */
+.info-contact{
+    background: linear-gradient(90deg, #edf6ef 0%, #52c368 100%);
+    padding: 25px 22px 19px 22px;
+}
+.cotnacts-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item-list{
+    max-width: 205px;
+}
+.logo_footer::before{
+    display: flex;
+    content: '';
+    width: 150px;
+    height: 35px;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+}
+.footer_address{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #3d3d3d;
+}
+.footer_address:hover{
+    color: #ffffff;
+    font-weight: 600;
+}
+.footer_address::before{
+    display: flex;
+    content: '';
+    width: 30px;
+    height: 20px;
+    background-image: url(../images/map-icon.svg);
+    background-repeat: no-repeat;
+}
+.footer-tel{
+    display: flex;
+    gap: 8px;
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #3d3d3d;
+}
+.footer-tel:hover{
+    color: #ffffff;
+    font-weight: 600;
+}
+.footer-tel::before{
+    display: flex;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/tel-icon.svg);
+    background-repeat: no-repeat;
+}
+.footer-email{
+    display: flex;
+    gap: 10px;
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #3d3d3d;
+}
+.footer-email:hover{
+    color: #ffffff;
+    font-weight: 600;
+}
+.footer-email::before{
+    display: flex;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/email-icon.svg);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+/* список футера, с ссылками на соцсети */
+.footer-item{
+    background: #FBFBFB;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 155px 27px 23px;
+    border-bottom:1px solid rgba(70, 163, 88, 0.2);
+}
+
+.support{
+    display: flex;
+    gap: 154px;
+}
+.support-item{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    margin-bottom: 8px;
+}
+.support-list{
+    font-weight: 400;
+    line-height: 214%;
+    font-family: $standard_font;
+    font-size: 14px;
+}
+.link-support{
+    color: #3d3d3d;
+}
+.link-support:hover{
+    color: #46A358;
+}
+
+
+/* правая часть ,  с соц медиа и ссілками на странички */
+.social_item{
+    margin-bottom: 33px;
+}
+.media-title{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    margin-bottom: 20px;
+}
+.social-media-item-link{
+    display: flex;
+    gap: 10px;
+}
+.social-icon::after{
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: flex;
+    background-image: url(../images/icon-fb.svg);
+    background-repeat: no-repeat;
+}
+.social-icon:hover::after{
+    background-image: url(../images/icon-fb-hover.svg);
+}
+
+.social-icon-inst::after{
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: flex;
+    background-image: url(../images/icon-ig.svg);
+    background-repeat: no-repeat;
+}
+.social-icon-inst:hover::after{
+    background-image: url(../images/icon-ig-hover.svg);
+}
+
+.social-icon3-tt::after{
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: flex;
+    background-image: url(../images/icon-tt.svg);
+    background-repeat: no-repeat;
+}
+.social-icon3-tt:hover::after{
+    background-image: url(../images/icon-tt-hover.svg);
+}
+.social-icon-in::after{
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: flex;
+    background-image: url(../images/icon-in.svg);
+    background-repeat: no-repeat;
+}
+.social-icon-in:hover::after{
+    background-image: url(../images/icon-in-hover.svg);
+}
+.social-icon-yt::after{
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: flex;
+    background-image: url(../images/icon-yt.svg);
+    background-repeat: no-repeat;
+}
+.social-icon-yt:hover::after{
+    background-image: url(../images/icon-yt-hover.svg);
+}
+
+
+
+
+.accept-title{
+    font-family: 'cera_probold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    margin-bottom: 13px;
+}
+.accept::after{
+    content: '';
+    width: 224px;
+    height: 26px;
+    display: flex;
+    background-image: url(../images/icon-paypal.png);
+    background-repeat: no-repeat;
+}
+
+
+/* самый последний текст, строчка про права сайта */
+.Rights-Reserved{
+     text-align: center;
+}
+.Rights-Reserved-title{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 214%;
+    color: #3d3d3d;
+}
+
+
+
+
+
+
+/* ниже это стили для хтмл регистрация */
+.registration{
+    max-width: 500px;
+    height: 656px;
+    border: 1px solid #00000040;
+    margin: auto;
+    margin-top: 35px;
+}
+.login{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 20px;
+    color: #191616;
+    margin-top: 52px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.line{
+    color: #3d3d3d;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+.register-title{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 80%;
+    color: #46a358;
+}
+.text_register{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 13px;
+    color: #3d3d3d;
+    text-align: center;
+    padding-bottom: 14px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.input{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 14px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+}
+.button_register{
+    display: flex;
+    justify-content: center;
+}
+.submit-button{
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #46A358;
+    width: 300px;
+    height: 45px;
+    margin-bottom: 36px;
+    cursor: pointer;
+    color: #ffffff;
+}
+.submit-button:active{
+    color: #00000094;
+}
+.submit-button:hover{
+    border: 1px solid #46A358;
+    background-color: #2b633b3c;
+    color: #46a358;
+}
+.span_text{
+    color: #FFFFFF;
+}
+.register_google_fb{
+    font-family: $standard_font;
+    font-weight: 400;
+    font-size: 13px;
+    color: #3d3d3d;
+    text-align: center;
+    margin-bottom: 27px;
+}
+.link_register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.google_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 15px;
+    gap: 9px;
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 13px;
+    color: #727272;
+    text-decoration: none;
+    list-style-type: none;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+}
+.google_link:hover{
+    background-color: #6b6b6b4b;
+    color: #ffffff;
+}
+.facebook_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    gap: 4px;
+    list-style-type: none;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    font-family: 'cera_promedium';
+    font-weight: 500;
+    font-size: 13px;
+    color: #727272;
+    text-decoration: none;
+    margin-bottom: 41px;
+}
+.facebook_link:hover{
+    background-color: #6b6b6b4b;
+    color: #ffffff;
+}
+.footer-line {
+    background-color: #46A358;
+    width: 100%;
+    height: 10px;
+}

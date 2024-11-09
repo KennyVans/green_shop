@@ -1,0 +1,34 @@
+/* PART_1 Прелоадер */
+$green_color: #46A358;
+$dark_color: #3d3d3d;
+$standard_font: 'cera_proregular';
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: preloaderEffect 6s forwards;
+    &::before{
+        content: '';
+        width: 150px;
+        height: 35px;
+        background-image: url(../images/logo.svg);
+        background-repeat: no-repeat;
+        display: flex;
+        animation: preloaderSpin 2s linear infinite;
+    }
+}
+@keyframes preloaderEffect{
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+@keyframes preloaderSpin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
