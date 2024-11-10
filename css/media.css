@@ -1,0 +1,124 @@
+@media only screen and (max-width: 768px) {
+  header .nav__list-item {
+    gap: 30px;
+  }
+  .caption {
+    font-size: 50px;
+  }
+  .product .container {
+    gap: 10px;
+  }
+  .product {
+    margin-bottom: 20px;
+  }
+  .flower_panel {
+    justify-content: center;
+  }
+  .sorting_panel {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sorting_menu {
+    gap: 10px;
+  }
+  .panel {
+    gap: 25px;
+    margin-bottom: 10px;
+  }
+  .product_cart {
+    margin-bottom: 35px;
+  }
+  .product_cart:nth-child(n+4) {
+    display: none;
+  }
+  .more-plants {
+    margin-bottom: 40px;
+  }
+  .more-plants .floral {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .more-plants .succulents_content {
+    margin-bottom: 50px;
+  }
+  .our-blog-cart {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .our-blog-cart .blog-cart {
+    margin-bottom: 20px;
+  }
+  .about-us {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-us .card-item {
+    margin-bottom: 20px;
+  }
+  .about-us .form-title {
+    text-align: center;
+  }
+  .footer-item {
+    padding: 33px 23px 27px 23px;
+  }
+  .footer-item .support {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  nav .nav__list-item {
+    display: none;
+  }
+  .pic-plant {
+    flex-direction: column;
+  }
+  .product .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product .container .left_site {
+    margin-bottom: 31px;
+  }
+  .floral .title-flower {
+    font-size: 14px;
+  }
+  .floral .text-flower {
+    max-width: 145px;
+    font-size: 12px;
+  }
+  .blog {
+    margin-bottom: 50px;
+  }
+  .card-item {
+    flex-direction: column;
+  }
+  .card-item .stick {
+    display: none;
+  }
+  .cotnacts-item {
+    flex-direction: column;
+  }
+  .footer-item {
+    flex-direction: column;
+  }
+  .footer-item .support {
+    margin-bottom: 20px;
+    gap: 18px;
+  }
+  .footer-item .support .support-item {
+    margin-bottom: 15px;
+  }
+  .footer-item .social_item .media-title {
+    text-align: center;
+  }
+  .footer-item .social_item .social-media-item-link {
+    justify-content: center;
+  }
+  .footer-item .accept .accept-title {
+    text-align: center;
+  }
+  .footer-item .accept::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}/*# sourceMappingURL=media.css.map */

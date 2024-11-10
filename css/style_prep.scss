@@ -25,17 +25,13 @@ body{
     margin: 0;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
+    padding: 0 20px;
 }
-@import "_fonts.scss";
-@import "_preload.scss"; 
-@import "_header.scss";
-@import "_media.scss";
-
-
-
-@media only screen and (max-width: 600px) {}
+@import "_fonts";
+@import "_preload"; 
+@import "_header";
 
 
 
@@ -141,6 +137,22 @@ body{
     justify-content: space-between;
     background-color: #FAFAFA;
 }
+.banner-left-site{
+    padding: 68px 10px 85px 43px;
+    display: inline-block;
+}
+.pic-banner-right-site img{
+    width: 100%;
+    height: 100%;
+}
+// .pic-banner-right-site::after{
+//         content: "";
+//         display: block;
+//         width: 507px;
+//         height: 470px;
+//         background-image: url(../images/flo_1.png);
+//         background-repeat: no-repeat;
+// }
 .text-welcome{
     font-family: 'cera_promedium';
     font-weight: 500;
@@ -150,7 +162,7 @@ body{
     /* letter-spacing это интервал  между буквами, 
     text-transform: uppercase; — все буквы текста в заглавные */
     color: $dark_color;
-    margin: 68px 0 7px 43px;
+    margin-bottom: 7px;
 }
 .caption{
     font-family: 'cera_problack';
@@ -159,7 +171,7 @@ body{
     line-height: 100%;
     text-transform: uppercase;
     color: #3d3d3d;
-    margin: 7px 0 5px 40px;
+    margin-bottom: 5px;
     max-width: 530px;
 }
 .plant_color{
@@ -171,17 +183,18 @@ body{
     font-size: 14px;
     line-height: 171%;
     color: #727272;
-    margin: 0 0 44px 40px;
+    margin-bottom: 44px;
     max-width: 557px;
 }
 .shop_btn{
+    display: inline-flex;
     font-family: 'cera_probold';
     font-weight: 700;
     font-size: 16px;
     line-height: 125%;
     text-transform: uppercase;
     color: #fff;
-    margin-left: 41px;
+    
     background-color: $green_color;
     border-radius: 6px;
     padding: 10px 26px;
@@ -214,7 +227,7 @@ body{
 }
 .left_site{
     max-width: 310px; 
-    max-height: 740px;
+    max-height: 1205px;
     background-color: #FAFAFA;
     padding-top: 14px;
 }
@@ -617,17 +630,17 @@ body{
 .succulents_content{
     display: flex;
     align-items: center;
+    justify-content: end;
     background-color: #FBFBFB; 
     max-width: 586px;
+    padding:  37px 30px 46px 0;
+    width: 100%;
     position: relative;
 }
 .find-more-icon{
     position: absolute;
     bottom: 10px;
-}
-.flower-content{
-    padding:  37px 30px 46px 0;
-    width: 600px;
+    left: 0;
 }
 .title-flower{
     font-family: 'cera_problack';
@@ -652,7 +665,6 @@ body{
     display: flex;
     justify-content: right;
 }
-
 .find_link{
     font-family: 'cera_promedium';
     font-weight: 500;

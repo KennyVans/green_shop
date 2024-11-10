@@ -26,8 +26,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @font-face {
@@ -214,7 +215,7 @@ header .menu-list .menu-item .menu-link {
   font-size: 16px;
   color: #3d3d3d;
   position: relative;
-  padding: 6px 0 12px 14px;
+  padding: 7px 0 7px 14px;
   display: block;
   width: 100%;
 }
@@ -226,7 +227,7 @@ header .menu-list .menu-item .menu-link-item::before {
   background-repeat: no-repeat;
   position: absolute;
   right: 17px;
-  bottom: 13px;
+  bottom: 10px;
 }
 header .menu-list .menu-item:hover .menu-link-item:before {
   background-image: url(../images/arrow-menu-w.svg);
@@ -324,11 +325,6 @@ header .nav-item .login_btn:hover:before {
   background-image: url(../images/Logout-green.svg);
 }
 
-@media only screen and (max-width: 600px) {
-  .header__inner {
-    display: none;
-  }
-}
 /* ниже стили для 1й секции */
 .intro {
   margin-bottom: 25px;
@@ -340,6 +336,16 @@ header .nav-item .login_btn:hover:before {
   background-color: #FAFAFA;
 }
 
+.banner-left-site {
+  padding: 68px 10px 85px 43px;
+  display: inline-block;
+}
+
+.pic-banner-right-site img {
+  width: 100%;
+  height: 100%;
+}
+
 .text-welcome {
   font-family: "cera_promedium";
   font-weight: 500;
@@ -349,7 +355,7 @@ header .nav-item .login_btn:hover:before {
   /* letter-spacing это интервал  между буквами, 
   text-transform: uppercase; — все буквы текста в заглавные */
   color: #3d3d3d;
-  margin: 68px 0 7px 43px;
+  margin-bottom: 7px;
 }
 
 .caption {
@@ -359,7 +365,7 @@ header .nav-item .login_btn:hover:before {
   line-height: 100%;
   text-transform: uppercase;
   color: #3d3d3d;
-  margin: 7px 0 5px 40px;
+  margin-bottom: 5px;
   max-width: 530px;
 }
 
@@ -373,18 +379,18 @@ header .nav-item .login_btn:hover:before {
   font-size: 14px;
   line-height: 171%;
   color: #727272;
-  margin: 0 0 44px 40px;
+  margin-bottom: 44px;
   max-width: 557px;
 }
 
 .shop_btn {
+  display: inline-flex;
   font-family: "cera_probold";
   font-weight: 700;
   font-size: 16px;
   line-height: 125%;
   text-transform: uppercase;
   color: #fff;
-  margin-left: 41px;
   background-color: #46A358;
   border-radius: 6px;
   padding: 10px 26px;
@@ -414,7 +420,7 @@ header .nav-item .login_btn:hover:before {
 
 .left_site {
   max-width: 310px;
-  max-height: 740px;
+  max-height: 1205px;
   background-color: #FAFAFA;
   padding-top: 14px;
 }
@@ -847,19 +853,18 @@ header .nav-item .login_btn:hover:before {
 .succulents_content {
   display: flex;
   align-items: center;
+  justify-content: end;
   background-color: #FBFBFB;
   max-width: 586px;
+  padding: 37px 30px 46px 0;
+  width: 100%;
   position: relative;
 }
 
 .find-more-icon {
   position: absolute;
   bottom: 10px;
-}
-
-.flower-content {
-  padding: 37px 30px 46px 0;
-  width: 600px;
+  left: 0;
 }
 
 .title-flower {
