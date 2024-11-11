@@ -66,9 +66,17 @@
         }
     }
 }
-@media only screen and (max-width: 440px){
+@media only screen and (max-width: 540px){
     nav{
         .nav__list-item{
+            display: none;
+        } 
+    }
+    .nav-item{
+        .search-item{
+            display: none;
+        }
+        .cart-item{
             display: none;
         }
     }
@@ -81,6 +89,9 @@
         .left_site{
             margin-bottom: 31px;
         }
+        .sorting_panel {
+            align-items: baseline;
+        }
     }
     .floral{
         .succulents_content{
@@ -88,7 +99,6 @@
         }
         .title-flower{
             font-size: 14px;
-
         }
         .text-flower{
             max-width: 145px;
@@ -112,6 +122,7 @@
      }
      .footer-item{
         flex-direction: column;
+        padding: 33px 5px 27px 5px;
         .support{
             margin-bottom: 20px;
             gap: 18px;
@@ -137,5 +148,27 @@
             }
          }
      }
-
+}
+@media only screen and (max-width: 428px){
+    .input-button{
+        max-width: 300px;
+    }
+    .email-for-add{
+        width: 220px;
+    }
+    .footer-item {
+        .support{
+            gap: 10px;
+            padding-left: 15px;
+        }
+    }
+}
+@media only screen and (max-width: 394px){
+.footer-item .support {
+    gap: 12px;
+    padding-left: 12px;
+    .support-item{
+        font-size: 16px;
+    }
+}
 }
