@@ -79,12 +79,18 @@
   .product .container .left_site {
     margin-bottom: 31px;
   }
+  .floral .succulents_content {
+    padding-right: 5px;
+  }
   .floral .title-flower {
     font-size: 14px;
   }
   .floral .text-flower {
     max-width: 145px;
     font-size: 12px;
+  }
+  .floral .find_link {
+    width: 115px;
   }
   .blog {
     margin-bottom: 50px;
