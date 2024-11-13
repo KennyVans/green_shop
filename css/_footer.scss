@@ -1,0 +1,212 @@
+/* ниже ФУТЕР, секция с логотипом */
+.info-contact{
+    background: linear-gradient(90deg, #edf6ef 0%, #52c368 100%);
+    padding: 25px 22px 19px 22px;
+    .cotnacts-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .item-list{
+            max-width: 205px;
+            .footer_address{
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                font-family: $standard_font;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 157%;
+                color: #3d3d3d;
+                &:hover{
+                    color: #ffffff;
+                    font-weight: 600;
+                }
+                &::before{
+                    display: flex;
+                    content: '';
+                    width: 30px;
+                    height: 20px;
+                    background-image: url(../images/map-icon.svg);
+                    background-repeat: no-repeat;
+                }
+            }
+            .footer-tel{
+                display: flex;
+                gap: 8px;
+                font-family: $standard_font;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 157%;
+                color: #3d3d3d;
+                &:hover{
+                    color: #ffffff;
+                    font-weight: 600;
+                }
+                &::before{
+                    display: flex;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(../images/tel-icon.svg);
+                    background-repeat: no-repeat;
+                }
+            }
+            .footer-email{
+                display: flex;
+                gap: 10px;
+                font-family: $standard_font;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 157%;
+                color: #3d3d3d;
+                &:hover{
+                    color: #ffffff;
+                    font-weight: 600;
+                }
+                &::before{
+                    display: flex;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(../images/email-icon.svg);
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+/* список футера, с ссылками на соцсети */
+.footer-item{
+    background: #FBFBFB;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 155px 27px 23px;
+    border-bottom:1px solid rgba(70, 163, 88, 0.2);
+    .support{
+        display: flex;
+        gap: 154px;
+        .support-item{
+            font-family: 'cera_probold';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 89%;
+            color: #3d3d3d;
+            margin-bottom: 8px;
+        }
+        .support-list{
+            font-weight: 400;
+            line-height: 214%;
+            font-family: $standard_font;
+            font-size: 14px;
+            .link-support{
+                color: #3d3d3d;
+                &:hover{
+                    color: #46A358;
+                }
+            }
+        }
+    }
+    .social-media{
+        /* правая часть ,  с соц медиа и ссілками на странички */
+        .social_item{
+            margin-bottom: 33px;
+            .media-title{
+                font-family: 'cera_probold';
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 89%;
+                color: #3d3d3d;
+                margin-bottom: 20px;
+            }
+            .social-media-item-link{
+                display: flex;
+                gap: 10px;
+                .social-icon::after{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    background-image: url(../images/icon-fb.svg);
+                    background-repeat: no-repeat;
+                }
+                .social-icon:hover::after{
+                    background-image: url(../images/icon-fb-hover.svg);
+                }
+                .social-icon-inst::after{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    background-image: url(../images/icon-ig.svg);
+                    background-repeat: no-repeat;
+                }
+                .social-icon-inst:hover::after{
+                    background-image: url(../images/icon-ig-hover.svg);
+                }
+                .social-icon3-tt::after{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    background-image: url(../images/icon-tt.svg);
+                    background-repeat: no-repeat;
+                }
+                .social-icon3-tt:hover::after{
+                    background-image: url(../images/icon-tt-hover.svg);
+                }
+                .social-icon-in::after{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    background-image: url(../images/icon-in.svg);
+                    background-repeat: no-repeat;
+                }
+                .social-icon-in:hover::after{
+                    background-image: url(../images/icon-in-hover.svg);
+                }
+                .social-icon-yt::after{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    background-image: url(../images/icon-yt.svg);
+                    background-repeat: no-repeat;
+                }
+                .social-icon-yt:hover::after{
+                    background-image: url(../images/icon-yt-hover.svg);
+                }                
+            }
+        }
+        .accept{
+            &::after{
+                content: '';
+                width: 224px;
+                height: 26px;
+                display: flex;
+                background-image: url(../images/icon-paypal.png);
+                background-repeat: no-repeat;
+            }
+            .accept-title{
+                font-family: 'cera_probold';
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 89%;
+                color: #3d3d3d;
+                margin-bottom: 13px;
+            }
+        }
+    }
+}
+/* самый последний текст, строчка про права сайта */
+.Rights-Reserved{
+     text-align: center;
+     .Rights-Reserved-title{
+        font-family: $standard_font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 214%;
+        color: #3d3d3d;
+    }
+}
