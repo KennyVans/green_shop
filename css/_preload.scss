@@ -23,12 +23,12 @@ $standard_font: 'cera_proregular';
         display: flex;
         animation: preloaderSpin 2s linear infinite;
     }
-}
-@keyframes preloaderEffect{
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
-}
-@keyframes preloaderSpin{
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+    @keyframes preloaderEffect{
+        0% { opacity: 1; }
+        100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes preloaderSpin{
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
 }

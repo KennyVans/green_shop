@@ -5,30 +5,30 @@
   .caption {
     font-size: 50px;
   }
-  .product .container {
-    gap: 10px;
-  }
   .product {
     margin-bottom: 20px;
   }
-  .flower_panel {
-    justify-content: center;
+  .product .container {
+    gap: 10px;
   }
-  .sorting_panel {
+  .product .sorting_panel {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .sorting_menu {
-    gap: 10px;
-  }
-  .panel {
+  .product .sorting_panel .panel {
     gap: 25px;
     margin-bottom: 10px;
   }
-  .product_cart {
+  .product .sorting_menu {
+    gap: 10px;
+  }
+  .product .flower_panel {
+    justify-content: center;
+  }
+  .product .flower_panel .product_cart {
     margin-bottom: 35px;
   }
-  .product_cart:nth-child(n+4) {
+  .product .flower_panel .product_cart:nth-child(n+4) {
     display: none;
   }
   .more-plants {

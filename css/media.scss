@@ -5,33 +5,34 @@
     .caption{
         font-size: 50px;
     }
-    .product .container {
-        gap: 10px;
-    }
     .product{
         margin-bottom: 20px;
-    }
-    .flower_panel {
-        justify-content: center;
-    }
-    .sorting_panel{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .sorting_menu{
-        gap: 10px;
-    }
-    .panel{
-        gap: 25px;
-        margin-bottom: 10px;
-    }
-    .product_cart{
-        margin-bottom: 35px;
-            &:nth-child(n+4) {
-                display: none;
+        .container {
+            gap: 10px;
+        }
+        
+        .sorting_panel{
+            flex-wrap: wrap;
+            justify-content: center;
+            .panel{
+                gap: 25px;
+                margin-bottom: 10px;
             }
+        }
+        .sorting_menu{
+            gap: 10px;
+        }
+        .flower_panel {
+            justify-content: center;
+            .product_cart{
+                margin-bottom: 35px;
+                    &:nth-child(n+4) {
+                        display: none;
+                    }
+            }
+        }
     }
-    // практикую ниже вложенность
+// практикую ниже вложенность
     .more-plants{
         margin-bottom: 40px;
         .floral{
@@ -167,11 +168,11 @@
     }
 }
 @media only screen and (max-width: 394px){
-.footer-item .support {
-    gap: 12px;
-    padding-left: 12px;
-    .support-item{
-        font-size: 16px;
+    .footer-item .support {
+        gap: 12px;
+        padding-left: 12px;
+        .support-item{
+            font-size: 16px;
+        }
     }
-}
 }

@@ -12,213 +12,202 @@ header{
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid hsla(132, 41%, 45%, 0.5);
-    }
-    .logo_btn{
-        margin-bottom: 18px;
-        display: flex;
-        animation: rotate 10s;
-            &::after{
-                content: "";
-                width: 150px;
-                height: 34px;
-                background-image: url(../images/logo.svg);
-                background-repeat: no-repeat;
-            }
-            @keyframes rotate{
-                0% {
-                    transform: rotate(0deg);
+        .logo_btn{
+            margin-bottom: 18px;
+            display: flex;
+            animation: rotate 10s;
+                @keyframes rotate{
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    20% {
+                        transform: rotate(90deg);
+                    }
+                    50% {
+                        transform: rotate(180deg);
+                    }
+                    70% {
+                        transform: rotate(250deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
                 }
-                20% {
-                    transform: rotate(90deg);
-                }
-                50% {
-                    transform: rotate(180deg);
-                }
-                70% {
-                    transform: rotate(250deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-    }
+        }
 /*PART_3 навигация */
-    .nav__list-item{
-        display: flex;
-        gap: 50px;
-        position: relative;
-        .nav__link-item{
-            .nav__link-text{
-                font-family: $standard_font;
-                font-weight: 400;
-                font-size: 16px;
-                color: $dark_color;
-            }
-            &:hover .menu-list{
-                display: block;
-            }
-                    /*нижнее подчеркивание для навигации при наведении мышкой*/
-            &::after{
-                display: block;
-                width: 0;
-                content: "";
-                background-color: $green_color;
-                height: 3px;
-                margin-top: 25px;
-                transition: 0.3s;
-                /* транзишн дает нам плавный переход д */
-            }
-            &:hover .nav__link-text{
-                font-weight: 700;
-                font-size: 16px;
-                color: $dark_color;
-            }
-            /* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
-            &:hover::after{
-                width: 100%;
-            }
-        } 
-    }
+        .nav__list-item{
+            display: flex;
+            gap: 50px;
+            position: relative;
+            .nav__link-item{
+                .nav__link-text{
+                    font-family: $standard_font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $dark_color;
+                }
+                &:hover .menu-list{
+                    display: block;
+                }
+/*нижнее подчеркивание для навигации при наведении мышкой*/
+                &::after{
+                    display: block;
+                    width: 0;
+                    content: "";
+                    background-color: $green_color;
+                    height: 3px;
+                    margin-top: 25px;
+                    transition: 0.3s;
+/* транзишн дает нам плавный переход д */
+                }
+                &:hover .nav__link-text{
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: $dark_color;
+                }
+/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
+                &:hover::after{
+                    width: 100%;
+                }
+            } 
+        }
 // PART_3 всплывающее меню
-.menu-list{
-    position: absolute;
-    min-width: 188px;
-    top: 40px;
-    display: none;
-    padding-top: 20px;
-    .menu-item{
-        background-color: #EDF6EE;
-        display: flex;
-        align-items: center;
-            &:hover .popup{
-                display: block;
-            }
-            &:hover{
-                background-color: #1A712A;
-            }
-            &:hover .menu-link{
-                font-family: 'cera_probold';
-                font-weight: 700;
-                color: #fff;
-            }
-            .menu-link{
-                font-family: $standard_font;
-                font-weight: 400;
-                font-size: 16px;
-                color: $dark_color;
-                position: relative;
-                padding: 7px 0 7px 14px ;
-                display: block;
-                width: 100%;
-            }
-            .menu-link-item::before{
-                content: '';
-                width: 10px;
-                height: 10px;
-                background-image: url(../images/arrow-menu.svg);
-                background-repeat: no-repeat;
-                position: absolute;
-                right: 17px;
-                bottom: 10px;
-            }
-            &:hover .menu-link-item:before{
-                background-image: url(../images/arrow-menu-w.svg);
-                background-repeat: no-repeat;
-            }
-    }
-}
-/* PART-4 выпадашка в выпадашке */
-.popup{
-    position: absolute;
-    min-width: 183px;
-    left: 185px;
-    top: 20px;
-    padding-left: 5px;
-    display: none;
-    .popup-list{
-        background-color: #EDF6EE;
-        display: flex;
-        align-items: center;
-            &:hover{
-                background-color: #1A712A;
-            }
-            &:hover .popup-link{
-                font-family: 'cera_probold';
-                font-weight: 700;
-                font-size: 16px;
-                color: #fff;
-            }
-            .popup-link{
-                font-family: $standard_font;
-                font-weight: 400;
-                font-size: 16px;
-                color: $dark_color;
-                padding: 7px 0 8px 14px;
-                display: block;
-                width: 100%;
-            }
-    }
-}
-// PART_5 иконка поиск, корзина, и залогинься
-    .nav-item{
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 18px;
-        .search-item::after{
-            display: flex;
-            content: "";
-            width: 20px;
-            height: 20px;
-            background-image: url(../images/search.svg);
-            background-repeat: no-repeat;
-        }
-        .cart-item::after{
-            display: flex;
-            content: "";
-            width: 29px;
-            height: 24px;
-            background-image: url(../images/shop_cart.svg);
-            background-repeat: no-repeat;
-        }
-        .login_btn{
+    .menu-list{
+        position: absolute;
+        min-width: 188px;
+        top: 40px;
+        display: none;
+        padding-top: 20px;
+        .menu-item{
+            background-color: #EDF6EE;
             display: flex;
             align-items: center;
-            padding: 7px 17px;
-            border: 1px solid $green_color;
-            border-radius: 6px;
-            background-color: $green_color;
-            font-weight: 500;
-            font-size: 16px;
-            color: #fff;
-            font-family: 'cera_promedium';
-            transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.5s 1s linear;
-            /* или
-            transition-property: background-color, color;
-            transition-duration: 3s;
-            transition-delay: 0s, 1s;
-            transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear; */
-                &:active{
-                    color: $green_color;
+                &:hover .popup{
+                    display: block;
                 }
                 &:hover{
-                    border: 1px solid $green_color;
-                    background-color: #2b633b3c;
-                    color: $green_color;
+                    background-color: #1A712A;
                 }
-                &::before{
-                    content: "";
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 4px;
-                    /* используем марджин-райт вместо гап */
-                    background-image: url(../images/logout.svg);
+                &:hover .menu-link{
+                    font-family: 'cera_probold';
+                    font-weight: 700;
+                    color: #fff;
+                }
+                .menu-link{
+                    font-family: $standard_font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $dark_color;
+                    position: relative;
+                    padding: 7px 0 7px 14px ;
+                    display: block;
+                    width: 100%;
+                }
+                .menu-link-item::before{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-image: url(../images/arrow-menu.svg);
                     background-repeat: no-repeat;
-                    
+                    position: absolute;
+                    right: 17px;
+                    bottom: 10px;
                 }
-                &:hover:before{
-                    background-image: url(../images/Logout-green.svg);
+                &:hover .menu-link-item:before{
+                    background-image: url(../images/arrow-menu-w.svg);
+                    background-repeat: no-repeat;
                 }
+/* PART-4 выпадашка в выпадашке */
+                .popup{
+                    position: absolute;
+                    min-width: 183px;
+                    left: 185px;
+                    top: 20px;
+                    padding-left: 5px;
+                    display: none;
+                    .popup-list{
+                        background-color: #EDF6EE;
+                        display: flex;
+                        align-items: center;
+                            &:hover{
+                                background-color: #1A712A;
+                            }
+                            &:hover .popup-link{
+                                font-family: 'cera_probold';
+                                font-weight: 700;
+                                font-size: 16px;
+                                color: #fff;
+                            }
+                            .popup-link{
+                                font-family: $standard_font;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: $dark_color;
+                                padding: 7px 0 8px 14px;
+                                display: block;
+                                width: 100%;
+                            }
+                    }
+                }
+        }
+    } 
+// PART_5 иконка поиск, корзина, и залогинься
+        .nav-item{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 18px;
+            .search-item::after{
+                display: flex;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-image: url(../images/search.svg);
+                background-repeat: no-repeat;
+            }
+            .cart-item::after{
+                display: flex;
+                content: "";
+                width: 29px;
+                height: 24px;
+                background-image: url(../images/shop_cart.svg);
+                background-repeat: no-repeat;
+            }
+            .login_btn{
+                display: flex;
+                align-items: center;
+                padding: 7px 17px;
+                border: 1px solid $green_color;
+                border-radius: 6px;
+                background-color: $green_color;
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+                font-family: 'cera_promedium';
+                transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.5s 1s linear;
+/* или transition-property: background-color, color; transition-duration: 3s; transition-delay: 0s, 1s; transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear; */
+                    &:active{
+                        color: $green_color;
+                    }
+                    &:hover{
+                        border: 1px solid $green_color;
+                        background-color: #2b633b3c;
+                        color: $green_color;
+                    }
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 4px;
+                        /* используем марджин-райт вместо гап */
+                        background-image: url(../images/logout.svg);
+                        background-repeat: no-repeat;
+                        
+                    }
+                    &:hover:before{
+                        background-image: url(../images/Logout-green.svg);
+                    }
+            }
         }
     }
 }

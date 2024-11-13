@@ -89,7 +89,6 @@ body {
   display: flex;
   animation: preloaderSpin 2s linear infinite;
 }
-
 @keyframes preloaderEffect {
   0% {
     opacity: 1;
@@ -107,31 +106,24 @@ body {
     transform: rotate(360deg);
   }
 }
+
 /*PART_2 хедер */
 /*PART_2 хедер */
 header {
   padding-top: 30px;
   margin-bottom: 12px;
-  /*PART_3 навигация */
-  /* PART-4 выпадашка в выпадашке */
 }
 header .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid hsla(132, 41%, 45%, 0.5);
+  /*PART_3 навигация */
 }
-header .logo_btn {
+header .header__inner .logo_btn {
   margin-bottom: 18px;
   display: flex;
   animation: rotate 10s;
-}
-header .logo_btn::after {
-  content: "";
-  width: 150px;
-  height: 34px;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
 }
 @keyframes rotate {
   0% {
@@ -150,25 +142,25 @@ header .logo_btn::after {
     transform: rotate(360deg);
   }
 }
-header .nav__list-item {
+header .header__inner .nav__list-item {
   display: flex;
   gap: 50px;
   position: relative;
 }
-header .nav__list-item .nav__link-item {
+header .header__inner .nav__list-item .nav__link-item {
   /*нижнее подчеркивание для навигации при наведении мышкой*/
   /* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
 }
-header .nav__list-item .nav__link-item .nav__link-text {
+header .header__inner .nav__list-item .nav__link-item .nav__link-text {
   font-family: "cera_proregular";
   font-weight: 400;
   font-size: 16px;
   color: #3d3d3d;
 }
-header .nav__list-item .nav__link-item:hover .menu-list {
+header .header__inner .nav__list-item .nav__link-item:hover .menu-list {
   display: block;
 }
-header .nav__list-item .nav__link-item::after {
+header .header__inner .nav__list-item .nav__link-item::after {
   display: block;
   width: 0;
   content: "";
@@ -178,38 +170,39 @@ header .nav__list-item .nav__link-item::after {
   transition: 0.3s;
   /* транзишн дает нам плавный переход д */
 }
-header .nav__list-item .nav__link-item:hover .nav__link-text {
+header .header__inner .nav__list-item .nav__link-item:hover .nav__link-text {
   font-weight: 700;
   font-size: 16px;
   color: #3d3d3d;
 }
-header .nav__list-item .nav__link-item:hover::after {
+header .header__inner .nav__list-item .nav__link-item:hover::after {
   width: 100%;
 }
-header .menu-list {
+header .header__inner .menu-list {
   position: absolute;
   min-width: 188px;
   top: 40px;
   display: none;
   padding-top: 20px;
 }
-header .menu-list .menu-item {
+header .header__inner .menu-list .menu-item {
   background-color: #EDF6EE;
   display: flex;
   align-items: center;
+  /* PART-4 выпадашка в выпадашке */
 }
-header .menu-list .menu-item:hover .popup {
+header .header__inner .menu-list .menu-item:hover .popup {
   display: block;
 }
-header .menu-list .menu-item:hover {
+header .header__inner .menu-list .menu-item:hover {
   background-color: #1A712A;
 }
-header .menu-list .menu-item:hover .menu-link {
+header .header__inner .menu-list .menu-item:hover .menu-link {
   font-family: "cera_probold";
   font-weight: 700;
   color: #fff;
 }
-header .menu-list .menu-item .menu-link {
+header .header__inner .menu-list .menu-item .menu-link {
   font-family: "cera_proregular";
   font-weight: 400;
   font-size: 16px;
@@ -219,7 +212,7 @@ header .menu-list .menu-item .menu-link {
   display: block;
   width: 100%;
 }
-header .menu-list .menu-item .menu-link-item::before {
+header .header__inner .menu-list .menu-item .menu-link-item::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -229,11 +222,11 @@ header .menu-list .menu-item .menu-link-item::before {
   right: 17px;
   bottom: 10px;
 }
-header .menu-list .menu-item:hover .menu-link-item:before {
+header .header__inner .menu-list .menu-item:hover .menu-link-item:before {
   background-image: url(../images/arrow-menu-w.svg);
   background-repeat: no-repeat;
 }
-header .popup {
+header .header__inner .menu-list .menu-item .popup {
   position: absolute;
   min-width: 183px;
   left: 185px;
@@ -241,21 +234,21 @@ header .popup {
   padding-left: 5px;
   display: none;
 }
-header .popup .popup-list {
+header .header__inner .menu-list .menu-item .popup .popup-list {
   background-color: #EDF6EE;
   display: flex;
   align-items: center;
 }
-header .popup .popup-list:hover {
+header .header__inner .menu-list .menu-item .popup .popup-list:hover {
   background-color: #1A712A;
 }
-header .popup .popup-list:hover .popup-link {
+header .header__inner .menu-list .menu-item .popup .popup-list:hover .popup-link {
   font-family: "cera_probold";
   font-weight: 700;
   font-size: 16px;
   color: #fff;
 }
-header .popup .popup-list .popup-link {
+header .header__inner .menu-list .menu-item .popup .popup-list .popup-link {
   font-family: "cera_proregular";
   font-weight: 400;
   font-size: 16px;
@@ -264,13 +257,13 @@ header .popup .popup-list .popup-link {
   display: block;
   width: 100%;
 }
-header .nav-item {
+header .header__inner .nav-item {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-bottom: 18px;
 }
-header .nav-item .search-item::after {
+header .header__inner .nav-item .search-item::after {
   display: flex;
   content: "";
   width: 20px;
@@ -278,7 +271,7 @@ header .nav-item .search-item::after {
   background-image: url(../images/search.svg);
   background-repeat: no-repeat;
 }
-header .nav-item .cart-item::after {
+header .header__inner .nav-item .cart-item::after {
   display: flex;
   content: "";
   width: 29px;
@@ -286,7 +279,7 @@ header .nav-item .cart-item::after {
   background-image: url(../images/shop_cart.svg);
   background-repeat: no-repeat;
 }
-header .nav-item .login_btn {
+header .header__inner .nav-item .login_btn {
   display: flex;
   align-items: center;
   padding: 7px 17px;
@@ -298,21 +291,17 @@ header .nav-item .login_btn {
   color: #fff;
   font-family: "cera_promedium";
   transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.5s 1s linear;
-  /* или
-  transition-property: background-color, color;
-  transition-duration: 3s;
-  transition-delay: 0s, 1s;
-  transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear; */
+  /* или transition-property: background-color, color; transition-duration: 3s; transition-delay: 0s, 1s; transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear; */
 }
-header .nav-item .login_btn:active {
+header .header__inner .nav-item .login_btn:active {
   color: #46A358;
 }
-header .nav-item .login_btn:hover {
+header .header__inner .nav-item .login_btn:hover {
   border: 1px solid #46A358;
   background-color: rgba(43, 99, 59, 0.2352941176);
   color: #46A358;
 }
-header .nav-item .login_btn::before {
+header .header__inner .nav-item .login_btn::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -321,7 +310,7 @@ header .nav-item .login_btn::before {
   background-image: url(../images/logout.svg);
   background-repeat: no-repeat;
 }
-header .nav-item .login_btn:hover:before {
+header .header__inner .nav-item .login_btn:hover:before {
   background-image: url(../images/Logout-green.svg);
 }
 
@@ -329,24 +318,16 @@ header .nav-item .login_btn:hover:before {
 .intro {
   margin-bottom: 25px;
 }
-
-.pic-plant {
+.intro .pic-plant {
   display: flex;
   justify-content: space-between;
   background-color: #FAFAFA;
 }
-
-.banner-left-site {
+.intro .pic-plant .banner-left-site {
   padding: 68px 10px 85px 43px;
   display: inline-block;
 }
-
-.pic-banner-right-site img {
-  width: 100%;
-  height: 100%;
-}
-
-.text-welcome {
+.intro .pic-plant .banner-left-site .text-welcome {
   font-family: "cera_promedium";
   font-weight: 500;
   font-size: 14px;
@@ -357,8 +338,7 @@ header .nav-item .login_btn:hover:before {
   color: #3d3d3d;
   margin-bottom: 7px;
 }
-
-.caption {
+.intro .pic-plant .banner-left-site .caption {
   font-family: "cera_problack";
   font-weight: 900;
   font-size: 70px;
@@ -368,12 +348,10 @@ header .nav-item .login_btn:hover:before {
   margin-bottom: 5px;
   max-width: 530px;
 }
-
-.plant_color {
+.intro .pic-plant .banner-left-site .caption .plant_color {
   color: #46A358;
 }
-
-.title {
+.intro .pic-plant .banner-left-site .title {
   font-family: "cera_proregular";
   font-weight: 400;
   font-size: 14px;
@@ -382,8 +360,7 @@ header .nav-item .login_btn:hover:before {
   margin-bottom: 44px;
   max-width: 557px;
 }
-
-.shop_btn {
+.intro .pic-plant .banner-left-site .shop_btn {
   display: inline-flex;
   font-family: "cera_probold";
   font-weight: 700;
@@ -397,175 +374,34 @@ header .nav-item .login_btn:hover:before {
   border: 1px solid transparent;
   transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
 }
-
-.shop_btn:active {
+.intro .pic-plant .banner-left-site .shop_btn:active {
   color: rgba(0, 0, 0, 0.5803921569);
 }
-
-.shop_btn:hover {
+.intro .pic-plant .banner-left-site .shop_btn:hover {
   border: 1px solid #46A358;
   background-color: rgba(43, 99, 59, 0.2352941176);
   color: #46A358;
+}
+.intro .pic-plant .pic-banner-right-site img {
+  width: 100%;
+  height: 100%;
 }
 
 /*стили для второй секции product*/
 .product {
   margin-bottom: 90px;
 }
-
 .product .container {
   display: flex;
   justify-content: space-between;
 }
-
-.left_site {
+.product .left_site {
   max-width: 310px;
   max-height: 1205px;
   background-color: #FAFAFA;
   padding-top: 14px;
 }
-
-.right_site {
-  max-width: 840px;
-}
-
-.sorting_panel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 31px;
-}
-
-.panel {
-  display: flex;
-  gap: 40px;
-}
-
-/* планочка сортировки цветов */
-.sorting_menu {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 7px;
-}
-
-.sorting-title {
-  font-family: "cera_proregular";
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 107%;
-  color: #3d3d3d;
-  align-items: center;
-}
-
-.sorting-nav {
-  position: relative;
-}
-
-.sorting-nav:hover .sort-menu {
-  display: block;
-}
-
-.arrow-btn {
-  display: flex;
-  font-family: "cera_proregular";
-  border: none;
-  background-color: #FFFFFF;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 107%;
-  color: #3d3d3d;
-  cursor: pointer;
-}
-
-.arrow-btn:hover {
-  color: #46A358;
-}
-
-.arrow-btn::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  margin-left: 5px;
-  /* используем марджин-райт вместо гап */
-  background-image: url(../images/arrow.svg);
-  background-repeat: no-repeat;
-}
-
-.arrow-btn:hover::after {
-  background-image: url(../images/arrow-sorting.svg);
-}
-
-.sort-menu {
-  padding-top: 20px;
-  position: absolute;
-  z-index: 2;
-  display: none;
-  right: 0px;
-}
-
-.sort-item {
-  width: 178px;
-  height: 35px;
-  background-color: #EDF6EE;
-  display: flex;
-  align-items: center;
-  padding-left: 14px;
-}
-
-.sort-item:hover {
-  background: #1a712a;
-}
-
-.sort-item:hover .link-menu-sort-flower {
-  font-weight: 700;
-  font-size: 16px;
-  color: #ffffff;
-  font-family: "cera_probold";
-}
-
-.link-menu-sort-flower {
-  font-family: "cera_proregular";
-  font-weight: 400;
-  font-size: 16px;
-  color: #3d3d3d;
-  display: block;
-  width: 100%;
-}
-
-.link_flower {
-  font-family: "cera_proregular";
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 107%;
-  color: #3d3d3d;
-}
-
-/* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
-.link_flower::after {
-  display: block;
-  width: 0;
-  content: "";
-  background-color: #46A358;
-  height: 3px;
-  margin-top: 7px;
-  transition: 0.3s;
-  /* транзишн дает нам плавный переход д */
-}
-
-/* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
-.link_flower:hover::after {
-  width: 100%;
-}
-
-.link_flower:hover {
-  color: #46a358;
-}
-
-.link_flower:active {
-  color: #727272;
-}
-
-.specifications {
+.product .left_site .specifications {
   font-family: "cera_probold";
   font-weight: 700;
   font-size: 18px;
@@ -574,12 +410,10 @@ header .nav-item .login_btn:hover:before {
   margin-left: 18px;
   margin-bottom: 7px;
 }
-
-.categories-list {
+.product .left_site .categories-list {
   margin-bottom: 36px;
 }
-
-.specifications_link {
+.product .left_site .categories-list .specifications_link {
   font-family: "cera_proregular";
   font-weight: 400;
   font-size: 15px;
@@ -587,20 +421,13 @@ header .nav-item .login_btn:hover:before {
   color: #3d3d3d;
   margin-left: 30px;
 }
-
-.specifications_link:hover {
+.product .left_site .categories-list .specifications_link:hover {
   color: #46a358;
 }
-
-.specifications_link:active {
+.product .left_site .categories-list .specifications_link:active {
   color: #727272;
 }
-
-.specifications-size {
-  margin-bottom: 19px;
-}
-
-.price {
+.product .left_site .price {
   font-family: "cera_proregular";
   font-weight: 400;
   font-size: 15px;
@@ -608,8 +435,7 @@ header .nav-item .login_btn:hover:before {
   color: #3d3d3d;
   margin: 15px 0 16px 30px;
 }
-
-.filter_btn {
+.product .left_site .filter_btn {
   border-radius: 6px;
   border: none;
   width: 90px;
@@ -623,111 +449,158 @@ header .nav-item .login_btn:hover:before {
   margin-left: 30px;
   margin-bottom: 46px;
 }
-
-.filter_btn:active {
+.product .left_site .filter_btn:active {
   color: rgba(0, 0, 0, 0.5803921569);
 }
-
-.filter_btn:hover {
+.product .left_site .filter_btn:hover {
   border: 1px solid #46A358;
   background-color: rgba(43, 99, 59, 0.2352941176);
   color: #46a358;
   cursor: pointer;
 }
-
-.flower_panel {
+.product .left_site .specifications-size {
+  margin-bottom: 19px;
+}
+.product .left_site .specifications-size .specifications_link_size {
+  font-family: "cera_proregular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 267%;
+  color: #3d3d3d;
+  margin-left: 30px;
+}
+.product .left_site .specifications-size .specifications_link_size:hover {
+  color: #46a358;
+}
+.product .left_site .specifications-size .specifications_link_size:active {
+  color: #727272;
+}
+.product .right_site {
+  max-width: 840px;
+}
+.product .right_site .sorting_panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 31px;
+  /* планочка сортировки цветов */
+}
+.product .right_site .sorting_panel .panel {
+  display: flex;
+  gap: 40px;
+}
+.product .right_site .sorting_panel .panel .link_flower {
+  font-family: "cera_proregular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 107%;
+  color: #3d3d3d;
+  /* ниже нав-линк-айтем-афтер создаем нижнее подчеркивание для   навигации при наведении мышкой) для тел.адапт можно использовать вместо наведения ховер-актив, как я уже делала кнопки*/
+  /* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
+}
+.product .right_site .sorting_panel .panel .link_flower::after {
+  display: block;
+  width: 0;
+  content: "";
+  background-color: #46A358;
+  height: 3px;
+  margin-top: 7px;
+  transition: 0.3s;
+  /* транзишн дает нам плавный переход д */
+}
+.product .right_site .sorting_panel .panel .link_flower:hover::after {
+  width: 100%;
+}
+.product .right_site .sorting_panel .panel .link_flower:hover {
+  color: #46a358;
+}
+.product .right_site .sorting_panel .panel .link_flower:active {
+  color: #727272;
+}
+.product .right_site .sorting_panel .sorting_menu {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 7px;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-title {
+  font-family: "cera_proregular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 107%;
+  color: #3d3d3d;
+  align-items: center;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-nav {
+  position: relative;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-nav:hover .sort-menu {
+  display: block;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-nav .sorting-list .arrow-btn {
+  display: flex;
+  font-family: "cera_proregular";
+  border: none;
+  background-color: #FFFFFF;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 107%;
+  color: #3d3d3d;
+  cursor: pointer;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-nav .sorting-list .arrow-btn:hover {
+  color: #46A358;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-nav .sorting-list .arrow-btn::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  /* используем марджин-райт вместо гап */
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+}
+.product .right_site .sorting_panel .sorting_menu .sorting-nav .sorting-list .arrow-btn:hover::after {
+  background-image: url(../images/arrow-sorting.svg);
+}
+.product .right_site .flower_panel {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /*  пишем бордер топ и к нему трансперент(не в ховере) чтобы при наведении не "скакало" изображение */
+  /*наша скидка 13% примыкает к тому , у кого есть  position: relative; , потому что наша скидка имеет позишн абсолют, если ни у кого не будет  position: relative; , то скидка примкнет к началу контейнера */
 }
-
-/*  пишем бордер топ и к нему трансперент(не в ховере) чтобы при наведении не "скакало" изображение */
-/*наша скидка 13% примыкает к тому , у кого есть  position: relative; , потому что наша скидка имеет позишн абсолют, если ни у кого не будет  position: relative; , то скидка примкнет к началу контейнера */
-.product_cart {
+.product .right_site .flower_panel .product_cart {
   display: flex;
   flex-direction: column;
   margin-bottom: 70px;
   position: relative;
   z-index: 1;
   border-top: 1px solid transparent;
+  /* убрала марджин боттом у трех последних карточек */
+  /* ниже стили -  при наведении на карточки с цветами всплывающие элементы */
 }
-
-.product_cart:hover {
+.product .right_site .flower_panel .product_cart:hover {
   border-top: 1px solid #46a359;
 }
-
-/* убрала марджин боттом у трех последних карточек */
-.product_cart:nth-child(7) {
+.product .right_site .flower_panel .product_cart:nth-child(7) {
   margin-bottom: 0;
 }
-
-.product_cart:nth-child(8) {
+.product .right_site .flower_panel .product_cart:nth-child(8) {
   margin-bottom: 0;
 }
-
-.product_cart:nth-child(9) {
+.product .right_site .flower_panel .product_cart:nth-child(9) {
   margin-bottom: 0;
 }
-
-.images_flower-cart {
+.product .right_site .flower_panel .product_cart .images_flower-cart {
   margin-bottom: 12px;
 }
-
-.sale-icon {
-  background-color: #46A358;
-  padding: 6px 8px;
-  width: 80px;
-  font-family: "cera_promedium";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 100%;
-  color: #fff;
-  position: absolute;
-  top: 14px;
-  left: 2px;
-}
-
-.name-flower_cart {
-  font-family: "cera_proregular";
-  margin-bottom: 6px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #3d3d3d;
-}
-
-.name-flower_cart:hover {
-  color: #46a358;
-}
-
-.flower-price {
-  font-family: "cera_probold";
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 89%;
-  color: #46a358;
-}
-
-.old-price {
-  color: #A5A5A5;
-  text-decoration: line-through;
-  font-family: "cera_proregular";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 89%;
-  margin-left: 16px;
-}
-
-/* ниже стили -  при наведении на карточки с цветами всплывающие элементы */
-.user-icon {
-  display: none;
-}
-
-.product_cart:hover .user-icon {
+.product .right_site .flower_panel .product_cart:hover .user-icon {
   display: block;
 }
-
-.icon-cart::before {
+.product .right_site .flower_panel .product_cart .user-icon {
+  display: none;
+}
+.product .right_site .flower_panel .product_cart .user-icon .user-item .icon-cart::before {
   content: "";
   width: 35px;
   height: 35px;
@@ -741,12 +614,10 @@ header .nav-item .login_btn:hover:before {
   bottom: 57px;
   left: 67px;
 }
-
-.icon-cart:hover::before {
+.product .right_site .flower_panel .product_cart .user-icon .user-item .icon-cart:hover::before {
   background-image: url(../images/shop-green.svg);
 }
-
-.icon-like::before {
+.product .right_site .flower_panel .product_cart .user-icon .user-item .icon-like::before {
   content: "";
   width: 35px;
   height: 35px;
@@ -760,12 +631,10 @@ header .nav-item .login_btn:hover:before {
   bottom: 57px;
   right: 111px;
 }
-
-.icon-like:hover::before {
+.product .right_site .flower_panel .product_cart .user-icon .user-item .icon-like:hover::before {
   background-image: url(../images/heart-green.svg);
 }
-
-.icon-srarch::before {
+.product .right_site .flower_panel .product_cart .user-icon .user-item .icon-srarch::before {
   content: "";
   width: 35px;
   height: 35px;
@@ -779,12 +648,51 @@ header .nav-item .login_btn:hover:before {
   bottom: 57px;
   right: 66px;
 }
-
-.icon-srarch:hover::before {
+.product .right_site .flower_panel .product_cart .user-icon .user-item .icon-srarch:hover::before {
   background-image: url(../images/search-green.svg);
 }
+.product .right_site .flower_panel .product_cart .sale-icon {
+  background-color: #46A358;
+  padding: 6px 8px;
+  width: 80px;
+  font-family: "cera_promedium";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  position: absolute;
+  top: 14px;
+  left: 2px;
+}
+.product .right_site .flower_panel .product_cart .name-flower_cart {
+  font-family: "cera_proregular";
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #3d3d3d;
+}
+.product .right_site .flower_panel .product_cart .name-flower_cart:hover {
+  color: #46a358;
+}
+.product .right_site .flower_panel .product_cart .flower-price {
+  font-family: "cera_probold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 89%;
+  color: #46a358;
+}
+.product .right_site .flower_panel .product_cart .old-price {
+  color: #A5A5A5;
+  text-decoration: line-through;
+  font-family: "cera_proregular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 89%;
+  margin-left: 16px;
+}
 
-/* секция - 1,2,3,4,5 переключатель между страничками */
+/* секция №3----1,2,3,4,5 переключатель между страничками */
 .switch {
   margin-bottom: 94px;
 }
