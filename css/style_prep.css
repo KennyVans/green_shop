@@ -108,7 +108,6 @@ body {
 }
 
 /*PART_2 хедер */
-/*PART_2 хедер */
 header {
   padding-top: 30px;
   margin-bottom: 12px;
@@ -280,18 +279,17 @@ header .header__inner .nav-item .cart-item::after {
   background-repeat: no-repeat;
 }
 header .header__inner .nav-item .login_btn {
+  border: 1px solid #46A358;
+  background-color: #46A358;
+  color: #fff;
+  transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
   display: flex;
   align-items: center;
   padding: 7px 17px;
-  border: 1px solid #46A358;
   border-radius: 6px;
-  background-color: #46A358;
   font-weight: 500;
   font-size: 16px;
-  color: #fff;
   font-family: "cera_promedium";
-  transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.5s 1s linear;
-  /* или transition-property: background-color, color; transition-duration: 3s; transition-delay: 0s, 1s; transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear; */
 }
 header .header__inner .nav-item .login_btn:active {
   color: #46A358;
@@ -574,21 +572,21 @@ header .header__inner .nav-item .login_btn:hover:before {
   max-width: 557px;
 }
 .intro .pic-plant .banner-left-site .shop_btn {
+  border: 1px solid #46A358;
+  background-color: #46A358;
+  color: #fff;
+  transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
   display: inline-flex;
   font-family: "cera_probold";
   font-weight: 700;
   font-size: 16px;
   line-height: 125%;
   text-transform: uppercase;
-  color: #fff;
-  background-color: #46A358;
   border-radius: 6px;
   padding: 10px 26px;
-  border: 1px solid transparent;
-  transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
 }
 .intro .pic-plant .banner-left-site .shop_btn:active {
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #46A358;
 }
 .intro .pic-plant .banner-left-site .shop_btn:hover {
   border: 1px solid #46A358;
@@ -649,27 +647,27 @@ header .header__inner .nav-item .login_btn:hover:before {
   margin: 15px 0 16px 30px;
 }
 .product .left_site .filter_btn {
+  border: 1px solid #46A358;
+  background-color: #46A358;
+  color: #fff;
+  transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
   border-radius: 6px;
-  border: none;
   width: 90px;
   height: 35px;
   font-family: "cera_probold";
   font-weight: 700;
   font-size: 16px;
   line-height: 125%;
-  color: #fff;
-  background-color: #46a358;
   margin-left: 30px;
   margin-bottom: 46px;
 }
 .product .left_site .filter_btn:active {
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #46A358;
 }
 .product .left_site .filter_btn:hover {
   border: 1px solid #46A358;
   background-color: rgba(43, 99, 59, 0.2352941176);
-  color: #46a358;
-  cursor: pointer;
+  color: #46A358;
 }
 .product .left_site .specifications-size {
   margin-bottom: 19px;
@@ -1001,19 +999,28 @@ header .header__inner .nav-item .login_btn:hover:before {
   justify-content: right;
 }
 .more-plants .floral .succulents_content .find_btn_link .find_link {
+  border: 1px solid #46A358;
+  background-color: #46A358;
+  color: #fff;
+  transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
   font-family: "cera_promedium";
   font-weight: 500;
   font-size: 14px;
-  color: #fff;
   border-radius: 6px;
   line-height: 143%;
-  border: 1px solid #46A358;
-  background: #46a358;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 140px;
   height: 40px;
+}
+.more-plants .floral .succulents_content .find_btn_link .find_link:active {
+  color: #46A358;
+}
+.more-plants .floral .succulents_content .find_btn_link .find_link:hover {
+  border: 1px solid #46A358;
+  background-color: rgba(43, 99, 59, 0.2352941176);
+  color: #46A358;
 }
 .more-plants .floral .succulents_content .find_btn_link .find_link::after {
   content: "";
@@ -1022,11 +1029,6 @@ header .header__inner .nav-item .login_btn:hover:before {
   background-image: url(../images/find_arrow.svg);
   background-repeat: no-repeat;
   margin-left: 5px;
-}
-.more-plants .floral .succulents_content .find_btn_link .find_link:hover {
-  border: 1px solid #46A358;
-  background: rgba(161, 161, 161, 0.368627451);
-  color: #46a358;
 }
 
 /*5 ниже это стили для Our Blog */
@@ -1191,22 +1193,25 @@ header .header__inner .nav-item .login_btn:hover:before {
   color: #acacac;
 }
 .about-us .form-email .input-button .button_join {
+  border: 1px solid #46A358;
+  background-color: #46A358;
+  color: #fff;
+  transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
   font-family: "cera_probold";
   font-weight: 700;
   font-size: 18px;
   line-height: 89%;
-  color: #fff;
   width: 85px;
   height: 40px;
-  border: none;
-  background-color: #46A358;
   border-radius: 0 6px 6px 0;
+}
+.about-us .form-email .input-button .button_join:active {
+  color: #46A358;
 }
 .about-us .form-email .input-button .button_join:hover {
   border: 1px solid #46A358;
   background-color: rgba(43, 99, 59, 0.2352941176);
-  color: #46a358;
-  cursor: pointer;
+  color: #46A358;
 }
 .about-us .form-email .form-subtitle {
   font-family: "cera_proregular";

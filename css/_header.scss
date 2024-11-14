@@ -1,9 +1,4 @@
 /*PART_2 хедер */
-$green_color: #46A358;
-$dark_color: #3d3d3d;
-$standard_font: 'cera_proregular';
-
-    /*PART_2 хедер */
 header{
     padding-top: 30px;
     margin-bottom: 12px;
@@ -174,26 +169,14 @@ header{
                 background-repeat: no-repeat;
             }
             .login_btn{
+                @include base_button;
                 display: flex;
                 align-items: center;
                 padding: 7px 17px;
-                border: 1px solid $green_color;
                 border-radius: 6px;
-                background-color: $green_color;
                 font-weight: 500;
                 font-size: 16px;
-                color: #fff;
                 font-family: 'cera_promedium';
-                transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.5s 1s linear;
-/* или transition-property: background-color, color; transition-duration: 3s; transition-delay: 0s, 1s; transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear; */
-                    &:active{
-                        color: $green_color;
-                    }
-                    &:hover{
-                        border: 1px solid $green_color;
-                        background-color: #2b633b3c;
-                        color: $green_color;
-                    }
                     &::before{
                         content: "";
                         width: 20px;
@@ -202,7 +185,6 @@ header{
                         /* используем марджин-райт вместо гап */
                         background-image: url(../images/logout.svg);
                         background-repeat: no-repeat;
-                        
                     }
                     &:hover:before{
                         background-image: url(../images/Logout-green.svg);

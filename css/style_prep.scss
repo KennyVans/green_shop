@@ -1,7 +1,21 @@
 $green_color: #46A358;
 $dark_color: #3d3d3d;
 $standard_font: 'cera_proregular';
-// выше переменные - цвет, шрифт и тд
+// выше переменные - цвет, шрифт и тд// миксины ниже
+@mixin base_button{
+    border: 1px solid $green_color;
+    background-color: $green_color;
+    color: #fff;
+    transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
+    &:active {
+        color: $green_color;
+      }
+      &:hover {
+        border: 1px solid $green_color;
+        background-color: #2b633b3c;
+        color: $green_color;
+      }
+}
 html{
     box-sizing: border-box;
 }
@@ -76,26 +90,15 @@ body{
                 max-width: 557px;
             }
             .shop_btn{
+                @include base_button;
                 display: inline-flex;
                 font-family: 'cera_probold';
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 125%;
                 text-transform: uppercase;
-                color: #fff;
-                background-color: $green_color;
                 border-radius: 6px;
                 padding: 10px 26px;
-                border: 1px solid transparent;
-                transition: background-color 2s cubic-bezier(0.1, 0.8, 0.5, 2), color 2s 1s linear;
-                &:active{
-                    color: #00000094;
-                }
-                &:hover{
-                    border: 1px solid $green_color;
-                    background-color: #2b633b3c;
-                    color: $green_color;
-                }
             }
         }
         .pic-banner-right-site img{
@@ -152,27 +155,16 @@ body{
             margin: 15px 0 16px 30px;
         }
         .filter_btn{
+            @include base_button;
             border-radius: 6px;
-            border: none;
             width: 90px;
             height: 35px;
             font-family: 'cera_probold';
             font-weight: 700;
             font-size: 16px;
             line-height: 125%;
-            color: #fff;
-            background-color: #46a358;
             margin-left: 30px;
             margin-bottom: 46px;
-            &:active{
-                color: #00000094;
-            }
-            &:hover{
-                border: 1px solid #46A358;
-                background-color: #2b633b3c;
-                color: #46a358;
-                cursor: pointer;
-            } 
         }
         .specifications-size{
             margin-bottom: 19px;
@@ -543,14 +535,12 @@ body{
                 display: flex;
                 justify-content: right;
                 .find_link{
+                    @include base_button;
                     font-family: 'cera_promedium';
                     font-weight: 500;
                     font-size: 14px;
-                    color: #fff;
                     border-radius: 6px;
                     line-height: 143%;
-                    border: 1px solid #46A358;
-                    background: #46a358;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -563,11 +553,6 @@ body{
                         background-image: url(../images/find_arrow.svg);
                         background-repeat: no-repeat;
                         margin-left: 5px;
-                    }
-                    &:hover{
-                        border: 1px solid #46A358;
-                        background: #a1a1a15e;
-                        color: #46a358;
                     }
                 }
             }
@@ -729,22 +714,14 @@ body{
                 }
             }
             .button_join{
+                @include base_button;
                 font-family: 'cera_probold';
                 font-weight: 700;
                 font-size: 18px;
                 line-height: 89%;
-                color: #fff;
                 width: 85px;
                 height: 40px;
-                border: none;
-                background-color: #46A358;
                 border-radius: 0 6px 6px 0;
-                &:hover{
-                    border: 1px solid #46A358;
-                    background-color: #2b633b3c;
-                    color: #46a358;
-                    cursor: pointer;
-                }
             }
     }
         .form-subtitle{
