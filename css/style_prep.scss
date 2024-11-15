@@ -49,6 +49,26 @@ body{
 /* ниже стили для 1й секции */
 .intro{
     margin-bottom: 25px;
+    .owl-carousel{
+        .owl-dots{
+            display: flex;
+            justify-content: center;
+            .owl-dot{
+                span{
+                    width: 10px;
+                    height: 10px;
+                    text-align: center;
+                    display: flex;
+                    border: 10px solid $green_color;
+                    margin: 10px;
+                    border-radius: 10px;
+                }
+                // &:active{
+                //         border: #3d3d3d;
+                //     }
+// активность идет на овл-дот, а цвет в спане
+            }
+        }
     .pic-plant{
         display: flex;
         justify-content: space-between;
@@ -106,6 +126,7 @@ body{
             height: 100%;
         }
     }
+}
 }
 /*стили для второй секции product*/
 .product{
