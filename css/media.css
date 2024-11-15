@@ -170,6 +170,7 @@
   }
   .about-us .form-email .input-button .email-for-add {
     width: 220px;
+    margin-bottom: 15px;
   }
   .footer-item .support {
     gap: 10px;
