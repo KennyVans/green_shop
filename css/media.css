@@ -1,9 +1,8 @@
-@charset "UTF-8";
 @media only screen and (max-width: 768px) {
   header .header__inner .nav__list-item {
     gap: 30px;
   }
-  .cцaption {
+  .caption {
     font-size: 50px;
   }
   .product {
@@ -73,13 +72,26 @@
   }
 }
 @media only screen and (max-width: 540px) {
+  header nav {
+    order: -1;
+  }
   header .header__inner .nav__list-item {
     display: none;
   }
-  .nav-item .search-item {
+  header .header__inner .mobile-menu {
+    display: flex;
+  }
+  header .header__inner .logo_btn {
+    animation: none;
+  }
+  header .header__inner .nav-item {
+    gap: 0;
+    align-items: center;
+  }
+  header .header__inner .nav-item .search-item {
     display: none;
   }
-  .nav-item .cart-item {
+  header .header__inner .nav-item .cart-item {
     display: none;
   }
   .pic-plant {

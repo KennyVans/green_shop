@@ -59,11 +59,14 @@ body{
                     height: 10px;
                     text-align: center;
                     display: flex;
-                    border: 10px solid $green_color;
+                    border: 10px solid rgba(87, 150, 87, 0.578);
                     margin: 10px;
                     border-radius: 10px;
                 }
-                // &:active{
+                &.active span {
+                    border-color: $green_color;
+                  }
+                // &:active{ не сработает!!! потому что :active применяется только во время нажатия, а для сохранения состояния (например, активной точки) библиотеки, такие как Owl Carousel, добавляют класс .active программно.
                 //         border: #3d3d3d;
                 //     }
 // активность идет на овл-дот, а цвет в спане
@@ -260,10 +263,11 @@ body{
                 }
                 .sorting-nav{
                     position: relative;
-                    &:hover .sort-menu{
-                        display: block;
-                    }
                     .sorting-list{
+                        &:hover .arrow-btn{
+                            color: #000000;
+                            font-weight: 400;
+                        }
                         .arrow-btn{
                             display: flex;
                             font-family: $standard_font;
@@ -274,54 +278,47 @@ body{
                             line-height: 107%;
                             color: #3d3d3d;
                             cursor: pointer;
-                            &:hover{
-                                color: #46A358;
-                            }
                             &::after{
                                 content: "";
                                 width: 16px;
                                 height: 16px;
                                 margin-left: 5px;
-    /* используем марджин-райт вместо гап */
                                 background-image: url(../images/arrow.svg);
                                 background-repeat: no-repeat;
                             }
-                            &:hover::after{
-                                background-image: url(../images/arrow-sorting.svg);
+                        }
+                        .sort-menu{
+                            padding-top: 20px;
+                            position: absolute;
+                            z-index: 2;
+                            display: none;
+                            right: 0px;
+                            .sort-item{
+                                background-color: #EDF6EE;
+                                display: flex;
+                                align-items: center;
+                                &:hover{
+                                    background: #1a712a;
+                                }
+                                &:hover .link-menu-sort-flower{
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                    color: #ffffff;
+                                    font-family: 'cera_probold';
+                                }
+                                .link-menu-sort-flower{
+                                    font-family: $standard_font;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    color: #3d3d3d;
+                                    width: 180px;
+                                    padding: 7px 0 7px 14px;
+                                }
                             }
                         }
-                        // .sort-menu{
-                        //     padding-top: 20px;
-                        //     position: absolute;
-                        //     z-index: 2;
-                        //     display: none;
-                        //     right: 0px;
-                        //     .sort-item{
-                        //         width: 178px;
-                        //         height: 35px;
-                        //         background-color: #EDF6EE;
-                        //         display: flex;
-                        //         align-items: center;
-                        //         padding-left: 14px;
-                        //         &:hover{
-                        //             background: #1a712a;
-                        //         }
-                        //         &:hover .link-menu-sort-flower{
-                        //             font-weight: 700;
-                        //             font-size: 16px;
-                        //             color: #ffffff;
-                        //             font-family: 'cera_probold';
-                        //         }
-                        //         .link-menu-sort-flower{
-                        //             font-family: $standard_font;
-                        //             font-weight: 400;
-                        //             font-size: 16px;
-                        //             color: #3d3d3d;
-                        //             display: block;
-                        //             width: 100%;
-                        //         }
-                        //     }
-                        // }
+                    }
+                    &:hover .sort-menu{
+                        display: block;
                     }
                 }
             } 

@@ -2,7 +2,7 @@
     header .header__inner .nav__list-item{
         gap: 30px;
     }
-    .cцaption{
+    .caption{
         font-size: 50px;
     }
     .product{
@@ -74,10 +74,21 @@
     }
 }
 @media only screen and (max-width: 540px){
+    header nav{
+        order: -1;
+    }
     header .header__inner .nav__list-item{
             display: none;
         } 
-    .nav-item{
+    header .header__inner .mobile-menu{
+            display: flex;
+        }
+    header .header__inner .logo_btn{
+        animation: none;
+    }
+    header .header__inner .nav-item{
+        gap: 0;
+        align-items: center;
         .search-item{
             display: none;
         }

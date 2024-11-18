@@ -30,6 +30,24 @@ header{
                 }
         }
 /*PART_3 навигация */
+        .mobile-menu{
+            display: none;
+            width: 50px;
+            height: 23px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+            border: none;
+            background: none;
+            bottom: 8px;
+            span {
+                background-color: $green_color;
+                height: 2px;
+                width: 50px;
+            }
+        }
         .nav__list-item{
             display: flex;
             gap: 50px;
@@ -57,7 +75,6 @@ header{
                 }
                 &:hover .nav__link-text{
                     font-weight: 700;
-                    font-size: 16px;
                     color: $dark_color;
                 }
 /* а вот ниже мы указываем что при навидении появится наша зеленая полоска шириной 100проц */
@@ -73,6 +90,7 @@ header{
         top: 40px;
         display: none;
         padding-top: 20px;
+        z-index: 2;
         .menu-item{
             background-color: #EDF6EE;
             display: flex;
