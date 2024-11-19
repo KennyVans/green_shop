@@ -148,6 +148,9 @@
   .about-us .form-email .form-title {
     text-align: center;
   }
+  .about-us .form-email .form-subtitle {
+    text-align: center;
+  }
   .cotnacts-item {
     flex-direction: column;
   }
@@ -177,12 +180,14 @@
   }
 }
 @media only screen and (max-width: 428px) {
+  .more-plants .floral .succulents_content {
+    padding-right: 0;
+  }
   .about-us .form-email .input-button {
     max-width: 300px;
   }
   .about-us .form-email .input-button .email-for-add {
     width: 220px;
-    margin-bottom: 15px;
   }
   .footer-item .support {
     gap: 10px;

@@ -1245,6 +1245,7 @@ header .header__inner .nav-item .login_btn:hover:before {
   border: none;
   border-radius: 6px 0 0 6px;
   background-color: #fff;
+  margin-bottom: 17px;
 }
 .about-us .form-email .input-button .email-for-add::-moz-placeholder {
   color: #acacac;
