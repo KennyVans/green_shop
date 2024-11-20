@@ -16,3 +16,7 @@ $('.owl-carousel')
         } 
     } 
 })
+// ниже новій из джквери
+$( function() {
+    $( "#accordion" ).accordion();
+  } );

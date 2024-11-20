@@ -666,6 +666,56 @@ body{
         }
     }
 }
+.accordion-js{
+    margin-bottom: 50px;
+    .ui-accordion .ui-accordion-header{
+        background-color: transparent;
+        padding: 20px 10px;
+        border: solid 1px black;
+        border-radius: 16px;
+        color: black;  
+    }
+        .ui-accordion .ui-accordion-header.ui-state-active{
+            border-radius: 16px 16px 1px 1px;
+            border-bottom: none;
+        }
+        .ui-accordion .ui-accordion-content{
+            border: solid 1px black;
+            border-radius: 1px 1px 16px 16px;
+            border-top: none;
+        }
+        .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+            color: #000;
+        }
+        .ui-icon{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-image: none;
+            background-position: inherit;
+            text-indent: 0;
+            margin-top: 0;
+            width: 32px;
+            height: 32px;
+            &::before{
+                content: "";
+                width: 32px;
+                height: 32px;
+                display: block;
+                background-image: url(https://www.limitlessx.com/cdn/shop/t/68/assets/chevron-down.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .ui-accordion .ui-accordion-header.ui-state-active .ui-icon{
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+        .ui-accordion .ui-accordion-header.ui-state-hover .ui-icon{
+            background-image: none;
+        }
+}
+
 /*6 ниже секция с эмейл и три карточки */
 .about-us{
     display: flex;
@@ -898,7 +948,6 @@ body{
         height: 10px;
     }    
 }
-
 
 
 
